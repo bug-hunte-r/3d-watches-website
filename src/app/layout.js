@@ -4,11 +4,6 @@ import localFont from 'next/font/local'
 const neo = localFont({
   src: [
     {
-      path: './../../public/font/Neometric-Bold.ttf',
-      weight: '800',
-      style: 'italic',
-    },
-    {
       path: './../../public/font/Neometric-Medium.ttf',
       weight: '500',
       style: 'normal',
