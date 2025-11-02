@@ -34,7 +34,7 @@ export default function Home() {
     scene.add(light)
 
     const loader = new GLTFLoader()
-    loader.load('/models/apple_watch_ultra_-_orange.glb', (gltf) => {
+    loader.load('./models/apple_watch_ultra_-_orange.glb', (gltf) => {
       const model = gltf.scene
       model.scale.set(55, 55, 55)
       model.rotation.x = 0.6
