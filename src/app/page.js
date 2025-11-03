@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import * as THREE from "three"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import media from '../../style/media.css'
 
 export default function Home() {
@@ -34,13 +35,16 @@ export default function Home() {
     scene.add(light)
 
     const loader = new GLTFLoader()
-    loader.load('./models/apple_watch_ultra_-_orange.glb', (gltf) => {
+    const dracoLoader = new DRACOLoader()
+    dracoLoader.setDecoderPath('./draco/');
+    loader.setDRACOLoader(dracoLoader);
+    loader.load('./models/watch-draco.glb', (gltf) => {
       const model = gltf.scene
       model.scale.set(55, 55, 55)
       model.rotation.x = 0.6
       model.traverse((child) => {
         if (child.name === 'wmnqxNpNCdRfDfA') {
-          child.material = new THREE.MeshStandardMaterial({ color: 'black' })
+          child.parent.remove(child)
         }
       })
 
