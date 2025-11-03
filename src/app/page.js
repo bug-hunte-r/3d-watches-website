@@ -31,7 +31,7 @@ export default function Home() {
     controls.enablePan = false
     controls.enableDamping = true
 
-    const light = new THREE.AmbientLight(0xffffff, 2)
+    const light = new THREE.AmbientLight(0xffffff, 5)
     scene.add(light)
 
     const loader = new GLTFLoader()
@@ -43,9 +43,23 @@ export default function Home() {
       model.scale.set(55, 55, 55)
       model.rotation.x = 0.6
       model.traverse((child) => {
+
         if (child.name === 'wmnqxNpNCdRfDfA') {
           child.parent.remove(child)
+
+        } else if (child.name === 'KZLnjqsQgoygPoi') {
+          child.material.color.set('orangered')
+  
+        } else if (child.name === 'ARsYRDtRfaqRvjc') {
+          child.material.color.set('orangered')
+        
+        } else if (child.name === 'slfmzSCVEebgEnx') {
+          child.material.color.set('orangered')
+        
+        } else if (child.name === 'cUdLcKThVrgrQtG') {
+          child.material.color.set('orangered')
         }
+
       })
 
       scene.add(model)
@@ -59,6 +73,20 @@ export default function Home() {
     animate()
 
   }, [])
+
+  // cUdLcKThVrgrQtG دور خر خری
+  // slfmzSCVEebgEnx دور دکمه چپ
+  // ARsYRDtRfaqRvjc دکمه راست
+  // KZLnjqsQgoygPoi دور صفحه
+  // yFPJxjHCZaMTTSP بند وسطی
+  // hFurRdLJljkLFkB بند
+
+  // cUdLcKThVrgrQtG
+  // slfmzSCVEebgEnx
+  // ARsYRDtRfaqRvjc
+  // KZLnjqsQgoygPoi
+  // yFPJxjHCZaMTTSP
+  // hFurRdLJljkLFkB
 
   return (
     <div className="container" ref={mountRef}>
