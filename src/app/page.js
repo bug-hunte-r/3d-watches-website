@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { useEffect, useRef } from "react"
 import * as THREE from "three"
+import { gsap } from "gsap"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
@@ -42,6 +43,7 @@ export default function Home() {
       const model = gltf.scene
       model.scale.set(55, 55, 55)
       model.rotation.x = 0.6
+
       model.traverse((child) => {
 
         if (child.name === 'wmnqxNpNCdRfDfA') {
@@ -49,13 +51,13 @@ export default function Home() {
 
         } else if (child.name === 'KZLnjqsQgoygPoi') {
           child.material.color.set('orangered')
-  
+
         } else if (child.name === 'ARsYRDtRfaqRvjc') {
           child.material.color.set('orangered')
-        
+
         } else if (child.name === 'slfmzSCVEebgEnx') {
           child.material.color.set('orangered')
-        
+
         } else if (child.name === 'cUdLcKThVrgrQtG') {
           child.material.color.set('orangered')
         }
@@ -63,6 +65,26 @@ export default function Home() {
       })
 
       scene.add(model)
+
+      gsap.from('.container-model', {
+        y: -100,
+        delay: 0.5,
+        duration: 1.5,
+        opacity: 0
+      })
+
+      gsap.from('.container-title-and-btn-header', {
+        y: -100,
+        delay: 0.5,
+        duration: 1.5,
+      })
+
+      gsap.to('.container-title-and-btn-header', {
+        delay: 0.5,
+        duration: 1.5,
+        opacity: 1
+      })
+
     })
 
     const animate = () => {
@@ -80,13 +102,6 @@ export default function Home() {
   // KZLnjqsQgoygPoi دور صفحه
   // yFPJxjHCZaMTTSP بند وسطی
   // hFurRdLJljkLFkB بند
-
-  // cUdLcKThVrgrQtG
-  // slfmzSCVEebgEnx
-  // ARsYRDtRfaqRvjc
-  // KZLnjqsQgoygPoi
-  // yFPJxjHCZaMTTSP
-  // hFurRdLJljkLFkB
 
   return (
     <div className="container" ref={mountRef}>
