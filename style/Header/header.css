@@ -1,4 +1,4 @@
-.header{
+.header {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -6,14 +6,39 @@
     justify-content: center;
 }
 
-.container-texts-header{
-
+.container-texts-header {
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 50%; */
+    /* opacity: 0; */
 }
 
-.title-header{
+.title-header {
     color: white;
+    font-size: calc(2vw + 30px);
 }
 
-.btn-header{
-
+.btn-header {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(20px);
+    font-size: calc(1vw + 10px);
+    background-color: transparent;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
 }
+
+/* .container-model {
+    width: 50%;
+    height: 80%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+} */
