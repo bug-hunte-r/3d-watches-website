@@ -1,135 +1,53 @@
 "use client"
-import Link from "next/link"
-import { useEffect, useRef } from "react"
-import * as THREE from "three"
-import { gsap } from "gsap"
-import { OrbitControls } from "three/addons/controls/OrbitControls.js"
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
-import media from '../../style/media.css'
-import { CiUser } from "react-icons/ci";
-import { CiShoppingCart } from "react-icons/ci";
+import Header from "../components/templates/Header"
+import Nav from "../components/templates/Nav"
+import Hyperspeed from '../../anim/Hyperspeed.js';
 
 export default function Home() {
 
-  const mountRef = useRef(null)
-  const watchDiv = useRef(null)
-
-  // useEffect(() => {
-
-  //   const container = watchDiv.current
-  //   const width = container.clientWidth
-  //   const height = container.clientHeight
-
-  //   const scene = new THREE.Scene()
-  //   const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 100)
-  //   camera.position.z = 4
-
-  //   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-  //   renderer.setSize(width, height)
-  //   container.appendChild(renderer.domElement)
-
-  //   const controls = new OrbitControls(camera, renderer.domElement)
-  //   controls.enableZoom = false
-  //   controls.enablePan = false
-  //   controls.enableDamping = true
-
-  //   const light = new THREE.AmbientLight(0xffffff, 5)
-  //   scene.add(light)
-
-  //   const loader = new GLTFLoader()
-  //   const dracoLoader = new DRACOLoader()
-  //   dracoLoader.setDecoderPath('./draco/');
-  //   loader.setDRACOLoader(dracoLoader);
-  //   loader.load('./models/watch-draco.glb', (gltf) => {
-  //     const model = gltf.scene
-  //     model.scale.set(55, 55, 55)
-  //     model.rotation.x = 0.6
-
-  //     model.traverse((child) => {
-
-  //       if (child.name === 'wmnqxNpNCdRfDfA') {
-  //         child.parent.remove(child)
-
-  //       } else if (child.name === 'KZLnjqsQgoygPoi') {
-  //         child.material.color.set('orangered')
-
-  //       } else if (child.name === 'ARsYRDtRfaqRvjc') {
-  //         child.material.color.set('orangered')
-
-  //       } else if (child.name === 'slfmzSCVEebgEnx') {
-  //         child.material.color.set('orangered')
-
-  //       } else if (child.name === 'cUdLcKThVrgrQtG') {
-  //         child.material.color.set('orangered')
-  //       }
-
-  //     })
-
-  //     scene.add(model)
-
-  //     gsap.from('.container-model', {
-  //       y: -100,
-  //       delay: 0.5,
-  //       duration: 1.5,
-  //       opacity: 0
-  //     })
-
-  //     gsap.from('.container-title-and-btn-header', {
-  //       y: -100,
-  //       delay: 0.5,
-  //       duration: 1.5,
-  //     })
-
-  //     gsap.to('.container-title-and-btn-header', {
-  //       delay: 0.5,
-  //       duration: 1.5,
-  //       opacity: 1
-  //     })
-
-  //   })
-
-  //   const animate = () => {
-  //     requestAnimationFrame(animate)
-  //     controls.update()
-  //     renderer.render(scene, camera)
-  //   }
-  //   animate()
-
-  // }, [])
-
-  // cUdLcKThVrgrQtG دور خر خری
-  // slfmzSCVEebgEnx دور دکمه چپ
-  // ARsYRDtRfaqRvjc دکمه راست
-  // KZLnjqsQgoygPoi دور صفحه
-  // yFPJxjHCZaMTTSP بند وسطی
-  // hFurRdLJljkLFkB بند
-
   return (
-    <div className="container" ref={mountRef}>
-
-      <nav className="nav">
-        <div className="container-logo">SW.</div>
-        <div className="container-nav-links">
-          <Link href="/" className="nav-links active-link">Home</Link>
-          <Link href="/" className="nav-links">About</Link>
-          <Link href="/" className="nav-links">Shop</Link>
-          <Link href="/" className="nav-links">Contact</Link>
-        </div>
-        <div className="container-nav-icons">
-          <CiUser className="nav-icons" />
-          <CiShoppingCart className="nav-icons" />
-        </div>
-      </nav>
-
-      {/* <header className="header">
-        <div className="container-title-and-btn-header">
-          <h1 className="title-header">The Perfect Moment Between Past And Future</h1>
-          <button className="btn-header-buy-now">Buy Now</button>
-        </div>
-
-        <div className="container-model" ref={watchDiv}></div>
-      </header> */}
-    </div>
+    <>
+      <Hyperspeed
+        effectOptions={{
+          onSpeedUp: () => { },
+          onSlowDown: () => { },
+          distortion: 'turbulentDistortion',
+          length: 400,
+          roadWidth: 10,
+          islandWidth: 2,
+          lanesPerRoad: 4,
+          fov: 90,
+          fovSpeedUp: 150,
+          speedUp: 2,
+          carLightsFade: 0.4,
+          totalSideLightSticks: 20,
+          lightPairsPerRoadWay: 40,
+          shoulderLinesWidthPercentage: 0.05,
+          brokenLinesWidthPercentage: 0.1,
+          brokenLinesLengthPercentage: 0.5,
+          lightStickWidth: [0.12, 0.5],
+          lightStickHeight: [1.3, 1.7],
+          movingAwaySpeed: [60, 80],
+          movingCloserSpeed: [-120, -160],
+          carLightsLength: [400 * 0.03, 400 * 0.2],
+          carLightsRadius: [0.05, 0.14],
+          carWidthPercentage: [0.3, 0.5],
+          carShiftX: [-0.8, 0.8],
+          carFloorSeparation: [0, 5],
+          colors: {
+            roadColor: 0x080808,
+            islandColor: 0x0a0a0a,
+            background: 0x000000,
+            shoulderLines: 0xFFFFFF,
+            brokenLines: 0xFFFFFF,
+            leftCars: [0xD856BF, 0x6750A2, 0xC247AC],
+            rightCars: [0x03B3C3, 0x0E5EA5, 0x324555],
+            sticks: 0x03B3C3,
+          }
+        }}
+      />
+      <Nav />
+      <Header />
+    </>
   )
 }
