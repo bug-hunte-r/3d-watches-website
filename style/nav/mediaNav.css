@@ -1,0 +1,5 @@
+@media only screen and (max-width: 510px) {
+    .nav {
+        width: 95vw;
+    }
+}
