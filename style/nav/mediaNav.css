@@ -3,3 +3,59 @@
         width: 95vw;
     }
 }
+
+@media only screen and (min-width: 1240px) {
+    .logo {
+        font-size: calc(2vw + 5px);
+    }
+
+    .nav {
+        width: 39vw;
+    }
+
+    .container-nav-links {
+        width: 30%;
+    }
+
+    .nav-links {
+        font-size: calc(1vw + 8px);
+    }
+
+    .nav-icons {
+        font-size: calc(1vw + 15px);
+    }
+}
+
+@media only screen and (min-width: 1373px) {
+    .nav {
+        height: 90px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .container-nav-icons{
+        width: 80px;
+    }
+}
+
+@media only screen and (min-width: 1781px) {
+    .nav {
+        height: 100px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .container-nav-icons{
+        width: 90px;
+    }
+}
+
+@media only screen and (min-width: 2156px) {
+    .nav {
+        height: 110px;
+    }
+
+    .container-nav-icons{
+        width: 100px;
+    }
+}
