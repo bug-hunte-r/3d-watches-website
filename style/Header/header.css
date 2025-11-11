@@ -8,11 +8,11 @@
 
 .container-texts-header {
     text-align: center;
-    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 50%; */
+    /* background-color: red; */
+    width: 70%;
 }
 
 .title-header {
@@ -31,13 +31,3 @@
     cursor: pointer;
     margin-top: 10px;
 }
-
-/* .container-model {
-    width: 50%;
-    height: 80%;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-} */

@@ -30,7 +30,7 @@ function Header() {
       <Sound />
       <header className='header'>
         <div className='container-texts-header'>
-          <h1 className='title-header'>The Perfect Moment Between<br /> Past And Future</h1>
+          <h1 className='title-header'>The Perfect Moment Between Past And Future</h1>
           <button className='btn-header'>Buy Now</button>
         </div>
         {/* <div className='container-model' ref={watchDiv}></div> */}
