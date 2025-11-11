@@ -7,7 +7,6 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import style from '../../../style/Header/header.css'
 import media from '../../../style/Header/mediaHeader.css'
-import Sound from '../modules/Sound'
 import { ToastContainer, toast } from 'react-toastify';
 import Nav from './Nav'
 
@@ -15,11 +14,12 @@ function Header() {
 
   const mountRef = useRef(null)
   const watchDiv = useRef(null)
+  const headerRef = useRef(null)
 
   const notif = () => toast("Click on lines 5 times in a row and hold the left click at the end. Trust me");
 
   useEffect(() => {
-    // notif()
+    notif()
 
     const container = watchDiv.current
     const width = container.clientWidth
@@ -107,13 +107,19 @@ function Header() {
     }
     animate()
 
+    const play = () => {
+      const audio = new Audio("./ef.mp3");
+      audio.play()
+    }
+
+    headerRef.current.addEventListener('click', play)
+
   }, [])
 
   return (
     <div className='container'>
       <Nav />
-      <Sound />
-      <header className='header'>
+      <header className='header' ref={headerRef}>
         <div className='container-texts-header'>
           <h1 className='title-header'>The Perfect Moment Between Past And Future</h1>
           <button className='btn-header'>Buy Now</button>
