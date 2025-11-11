@@ -3,7 +3,6 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .container-texts-header {
@@ -11,8 +10,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: red; */
-    width: 70%;
+    width: 50%;
+    opacity: 0;
 }
 
 .title-header {
@@ -32,4 +31,10 @@
     cursor: pointer;
     margin-top: 10px;
     font-family: neo;
+}
+
+.container-model{
+    width: 50%;
+    height: 85%;
+    cursor: pointer;
 }

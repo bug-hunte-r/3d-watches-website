@@ -1,23 +1,12 @@
 "use client"
-import React, { useEffect } from 'react'
+import React from 'react'
 import { CiUser } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import style from '../../../style/nav/nav.css'
 import media from '../../../style/nav/mediaNav.css'
 import Link from "next/link"
-import gsap from 'gsap';
 
 function Nav() {
-
-    useEffect(() => {
-
-        gsap.from('.nav', {
-            y: 200,
-            duration: 1
-        })
-
-    }, [])
-
     return (
         <div className='container'>
             <nav className="nav">
