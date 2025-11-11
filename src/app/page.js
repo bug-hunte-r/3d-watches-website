@@ -1,6 +1,5 @@
 "use client"
 import Header from "../components/templates/Header"
-import Nav from "../components/templates/Nav"
 import Hyperspeed from '../../anim/Hyperspeed.js';
 
 export default function Home() {
@@ -46,7 +45,6 @@ export default function Home() {
           }
         }}
       />
-      <Nav />
       <Header />
     </>
   )

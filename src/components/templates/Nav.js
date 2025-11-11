@@ -8,7 +8,6 @@ import Link from "next/link"
 
 function Nav() {
     return (
-        <div className='container'>
             <nav className="nav">
                 <h3 className="logo">SW.</h3>
                 <div className="container-nav-links">
@@ -20,7 +19,6 @@ function Nav() {
                     <CiShoppingCart className="nav-icons" />
                 </div>
             </nav>
-        </div>
     )
 }
 

@@ -9,6 +9,7 @@ import style from '../../../style/Header/header.css'
 import media from '../../../style/Header/mediaHeader.css'
 import Sound from '../modules/Sound'
 import { ToastContainer, toast } from 'react-toastify';
+import Nav from './Nav'
 
 function Header() {
 
@@ -110,6 +111,7 @@ function Header() {
 
   return (
     <div className='container'>
+      <Nav />
       <Sound />
       <header className='header'>
         <div className='container-texts-header'>
