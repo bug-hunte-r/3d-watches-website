@@ -16,6 +16,7 @@
 .logo{
     color: white;
     font-size: 30px;
+    font-family: riv;
 }
 
 .container-nav-links{
@@ -29,6 +30,7 @@
     text-decoration: none;
     color: white;
     font-weight: 300;
+    font-family: neo;
 }
 
 .active-link{

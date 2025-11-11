@@ -16,9 +16,13 @@ const neo = localFont({
   ],
 })
 
+const riv = localFont({
+  src: '../../public/font/Riviera.otf',
+})
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${neo.className}`}>
+    <html lang="en" className={` ${riv.className} ${neo.className}`}>
       <body>
         {children}
       </body>

@@ -18,6 +18,7 @@
 .title-header {
     color: white;
     font-size: calc(2vw + 30px);
+    font-family: neo;
 }
 
 .btn-header {
@@ -30,4 +31,5 @@
     border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
+    font-family: neo;
 }
