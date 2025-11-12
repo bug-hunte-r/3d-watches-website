@@ -5,13 +5,12 @@ import media from '../../style/BestSeller/mediaBestSeller.css'
 import BestSellerCard from '../modules/BestSellerCard'
 import _ScrollTrigger from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
+import Image from 'next/image'
 
 function BestSeller() {
 
     useEffect(() => {
-
         gsap.registerPlugin(_ScrollTrigger)
-
         gsap.from('.title-best-seller', {
             y: 100,
             opacity: 0,
@@ -23,7 +22,6 @@ function BestSeller() {
                 toggleActions: "play none none reverse",
             },
         });
-
     }, [])
 
     return (
@@ -31,6 +29,17 @@ function BestSeller() {
             <h1 className='title-best-seller'>Best Seller</h1>
             <div className='container-best-seller-cards'>
                 <BestSellerCard />
+            </div>
+            <div className='container-big-card-best-seller-1'>
+                <div className='container-img-big-card-1'>
+                <Image src={'/imgs/img-big.png'} width={500} height={500} alt='big-watch' className='img-big-card1' />
+                </div>
+                <div className='container-texts-big-card-1'>
+                    <h2 className='title-big-card-1'>Apple Watch Ultra 3</h2>
+                    <p className='desc-big-card-1'>The perfect and smart watch with great bands</p>
+                    <p className='price-big-card-1'>200$</p>
+                    <button className='btn-big-card-1'>Buy</button>
+                </div>
             </div>
         </div>
     )

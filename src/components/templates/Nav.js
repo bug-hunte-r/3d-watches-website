@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import { CiUser } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
@@ -8,17 +7,17 @@ import Link from "next/link"
 
 function Nav() {
     return (
-            <nav className="nav">
-                <h3 className="logo">SW.</h3>
-                <div className="container-nav-links">
-                    <Link href="/" className="nav-links active-link">Home</Link>
-                    <Link href="/" className="nav-links">Shop</Link>
-                </div>
-                <div className="container-nav-icons">
-                    <CiUser className="nav-icons" />
-                    <CiShoppingCart className="nav-icons" />
-                </div>
-            </nav>
+        <nav className="nav">
+            <h3 className="logo">SW.</h3>
+            <div className="container-nav-links">
+                <Link href="/" className="nav-links active-link">Home</Link>
+                <Link href="/" className="nav-links">Shop</Link>
+            </div>
+            <div className="container-nav-icons">
+                <CiUser className="nav-icons" />
+                <CiShoppingCart className="nav-icons" />
+            </div>
+        </nav>
     )
 }
 
