@@ -1,0 +1,145 @@
+@media only screen and (max-width: 900px) {
+    .best-seller-cards {
+        width: calc(25vw + 20px);
+        height: calc(30vw + 20px);
+    }
+
+    .container-best-seller-cards {
+        grid-template-columns: repeat(3, calc(25vw + 20px));
+    }
+
+    .img-best-seller-card {
+        margin-top: -70px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .best-seller-cards {
+        width: calc(27vw + 20px);
+        height: calc(32vw + 20px);
+    }
+
+    .container-best-seller-cards {
+        grid-template-columns: repeat(3, calc(27vw + 20px));
+    }
+
+    .img-best-seller-card {
+        margin-top: -60px;
+        width: calc(15vw + 20px);
+        height: calc(15vw + 20px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .best-seller-cards {
+        width: 400px;
+        height: 400px;
+    }
+
+    .container-best-seller-cards {
+        grid-template-columns: repeat(1, 400px);
+        row-gap: 100px;
+        margin-top: 100px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .img-best-seller-card {
+        margin-top: -100px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .title-best-seller-card {
+        font-size: 30px;
+    }
+
+    .desc-best-seller-card {
+        font-size: 20px;
+    }
+
+    .price-best-seller-card {
+        font-size: 20px;
+    }
+
+    .btn-best-seller-card {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .best-seller-cards {
+        width: 350px;
+        height: 350px;
+    }
+
+    .container-best-seller-cards {
+        grid-template-columns: repeat(1, 350px);
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .best-seller-cards {
+        width: 300px;
+        height: 300px;
+    }
+
+    .container-best-seller-cards {
+        grid-template-columns: repeat(1, 300px);
+    }
+
+    .img-best-seller-card {
+        margin-top: -100px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .title-best-seller-card {
+        font-size: 25px;
+    }
+
+    .desc-best-seller-card {
+        font-size: 15px;
+    }
+
+    .price-best-seller-card {
+        font-size: 15px;
+    }
+
+    .btn-best-seller-card {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .best-seller-cards {
+        width: 250px;
+        height: 250px;
+    }
+
+    .container-best-seller-cards {
+        grid-template-columns: repeat(1, 250px);
+    }
+
+    .img-best-seller-card {
+        margin-top: -80px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .title-best-seller-card {
+        font-size: 22px;
+    }
+
+    .desc-best-seller-card {
+        font-size: 12px;
+    }
+
+    .price-best-seller-card {
+        font-size: 12px;
+    }
+
+    .btn-best-seller-card {
+        font-size: 12px;
+    }
+}

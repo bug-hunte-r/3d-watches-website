@@ -3,8 +3,7 @@
     font-size: calc(3vw + 10px);
     border-bottom: 3px solid white;
     width: max-content;
-    position: relative;
-    top: 56px;
+    margin-top: 40px;
     border-radius: 10px;
 }
 
@@ -14,26 +13,28 @@
     display: grid;
     justify-content: space-around;
     align-items: center;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, calc(21vw + 20px));
 }
 
 .best-seller-cards {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: calc(21vw + 20px);
+    height: calc(25vw + 20px);
     overflow: visible;
     justify-content: space-evenly;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.116);
+    /* border: 2px solid white; */
     backdrop-filter: blur(10px);
 }
 
 .img-best-seller-card {
-    width: 180px;
-    height: 180px;
+    width: calc(12vw + 20px);
+    height: calc(12vw + 20px);
     margin-top: -90px;
+    object-fit: cover;
 }
 
 .title-best-seller-card {
