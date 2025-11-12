@@ -81,7 +81,7 @@ function Header() {
       gsap.from('.container-model', {
         y: -100,
         duration: 1.5,
-        opacity: 0
+        opacity: 0,
       })
 
       gsap.from('.container-texts-header', {
