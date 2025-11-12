@@ -5,8 +5,8 @@ import { gsap } from "gsap"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
-import style from '../../../style/Header/header.css'
-import media from '../../../style/Header/mediaHeader.css'
+import style from '../../style/Header/header.css'
+import media from '../../style/Header/mediaHeader.css'
 import { ToastContainer, toast } from 'react-toastify';
 import Nav from './Nav'
 
@@ -128,7 +128,7 @@ function Header() {
       </header>
       <ToastContainer
         position="top-center"
-        autoClose={20000}
+        autoClose={15000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

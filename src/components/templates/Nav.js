@@ -2,8 +2,8 @@
 import React from 'react'
 import { CiUser } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
-import style from '../../../style/nav/nav.css'
-import media from '../../../style/nav/mediaNav.css'
+import style from '../../style/nav/nav.css'
+import media from '../../style/nav/mediaNav.css'
 import Link from "next/link"
 
 function Nav() {
