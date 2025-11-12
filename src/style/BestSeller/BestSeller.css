@@ -7,6 +7,15 @@
     border-radius: 10px;
 }
 
+.container-best-seller{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
 .container-best-seller-cards {
     width: 100%;
     height: 100vh;
@@ -14,6 +23,7 @@
     justify-content: space-around;
     align-items: center;
     grid-template-columns: repeat(3, calc(21vw + 20px));
+    overflow-y: hidden;
 }
 
 .best-seller-cards {
@@ -82,6 +92,7 @@
     backdrop-filter: blur(20px);
     border-radius: 10px;
     padding: 20px 0 20px 0;
+    opacity: 1;
 }
 
 .container-big-card-best-seller-2 {
