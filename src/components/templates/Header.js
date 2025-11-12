@@ -7,7 +7,6 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import style from '../../style/Header/header.css'
 import media from '../../style/Header/mediaHeader.css'
-import { ToastContainer, toast } from 'react-toastify';
 import Nav from './Nav'
 
 function Header() {
@@ -16,10 +15,7 @@ function Header() {
   const watchDiv = useRef(null)
   const headerRef = useRef(null)
 
-  const notif = () => toast("Click on lines 5 times in a row and hold the left click at the end. Trust me");
-
   useEffect(() => {
-    notif()
 
     const container = watchDiv.current
     const width = container.clientWidth
@@ -106,14 +102,6 @@ function Header() {
       renderer.render(scene, camera)
     }
     animate()
-
-    const play = () => {
-      const audio = new Audio("./ef.mp3");
-      audio.play()
-    }
-
-    headerRef.current.addEventListener('click', play)
-
   }, [])
 
   return (
@@ -126,18 +114,6 @@ function Header() {
         </div>
         <div className='container-model' ref={watchDiv}></div>
       </header>
-      <ToastContainer
-        position="top-center"
-        autoClose={15000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-        closeButton={false}
-      />
     </div>
   )
 }

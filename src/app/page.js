@@ -2,6 +2,8 @@
 import Header from "../components/templates/Header"
 import BestSeller from "@/components/templates/BestSeller";
 import Hyperspeed from '../anim/Hyperspeed.js';
+import Back from "@/anim/Silk";
+import Silk from "@/anim/Silk";
 
 export default function Home() {
 
@@ -9,7 +11,7 @@ export default function Home() {
     <>
 
       <div className="hyperSpeed">
-        <Hyperspeed
+        {/* <Hyperspeed
           effectOptions={{
             onSpeedUp: () => { },
             onSlowDown: () => { },
@@ -47,9 +49,16 @@ export default function Home() {
               sticks: 0x03B3C3,
             }
           }}
+        /> */}
+        <Silk
+          speed={10}
+          scale={1}
+          color="#006eff"
+          noiseIntensity={0}
+          rotation={0}
         />
       </div>
-      
+
       <Header />
       <BestSeller />
     </>
