@@ -106,7 +106,7 @@ function Header() {
 
   return (
     <div className='container'>
-      <Nav />
+      {/* <Nav /> */}
       <header className='header' ref={headerRef}>
         <div className='container-texts-header'>
           <h1 className='title-header'>The Perfect Moment Between Past And Future</h1>
