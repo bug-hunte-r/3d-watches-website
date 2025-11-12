@@ -143,3 +143,9 @@
         font-size: 12px;
     }
 }
+
+@media only screen and (min-width: 1300px) {
+    .title-best-seller {
+        font-size: calc(3vw + 10px);
+    }
+}

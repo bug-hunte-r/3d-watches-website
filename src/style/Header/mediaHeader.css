@@ -18,9 +18,3 @@
         height: 360px;
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .title-header {
-        font-size: calc(2vw + 20px);
-    }
-}
