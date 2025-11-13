@@ -7,7 +7,7 @@
     border-radius: 10px;
 }
 
-.container-best-seller{
+.container-best-seller {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -80,6 +80,13 @@
     font-size: calc(1vw + 5px);
     color: white;
     cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-best-seller-card:hover {
+    transform: rotate(8deg) scale(1.1);
+    background-color: white;
+    color: #006eff;
 }
 
 .container-big-card-best-seller-1 {
@@ -141,7 +148,7 @@
     justify-content: center;
     height: 100%;
     row-gap: 20px;
-    width: 70%;
+    width: 500px;
 }
 
 .title-big-card-1 {
@@ -176,4 +183,5 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: 300;
+    transition: 0.4s;
 }

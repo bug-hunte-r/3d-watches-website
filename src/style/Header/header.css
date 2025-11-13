@@ -10,7 +10,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 50%;
+    height: 320px;
     opacity: 0;
 }
 
@@ -31,6 +33,13 @@
     cursor: pointer;
     margin-top: 10px;
     font-family: neo;
+    transition: 0.4s;
+}
+
+.btn-header:hover{
+    transform: rotate(8deg) scale(1.1);
+    background-color: white;
+    color: #006eff;
 }
 
 .container-model{
