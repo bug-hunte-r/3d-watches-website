@@ -74,7 +74,7 @@
 .btn-best-seller-card {
     font-family: neo;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 7px 30px 7px 30px;
     font-size: calc(1vw + 5px);

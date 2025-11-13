@@ -52,16 +52,16 @@ function Header() {
           child.parent.remove(child)
 
         } else if (child.name === 'KZLnjqsQgoygPoi') {
-          child.material.color.set('#8CE4FF')
+          child.material.color.set('#ffffff')
 
         } else if (child.name === 'ARsYRDtRfaqRvjc') {
-          child.material.color.set('#8CE4FF')
+          child.material.color.set('#ffffff')
 
         } else if (child.name === 'slfmzSCVEebgEnx') {
-          child.material.color.set('#8CE4FF')
+          child.material.color.set('#ffffff')
 
         } else if (child.name === 'cUdLcKThVrgrQtG') {
-          child.material.color.set('#8CE4FF')
+          child.material.color.set('#ffffff')
 
         } else if (child.isMesh && child.name === "yFPJxjHCZaMTTSP" || child.isMesh && child.name === "hFurRdLJljkLFkB") {
           const mat = child.material;
@@ -70,7 +70,7 @@ function Header() {
             mat.map = null;
           }
 
-          mat.color.set("#8CE4FF");
+          mat.color.set("#ffffff");
           mat.needsUpdate = true;
         }
 
