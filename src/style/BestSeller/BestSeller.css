@@ -86,7 +86,7 @@
 .btn-best-seller-card:hover {
     transform: rotate(8deg) scale(1.1);
     background-color: white;
-    color: #006eff;
+    color: black;
 }
 
 .container-big-card-best-seller-1 {

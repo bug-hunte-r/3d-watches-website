@@ -12,7 +12,6 @@
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 320px;
     opacity: 0;
 }
 
@@ -39,7 +38,7 @@
 .btn-header:hover{
     transform: rotate(8deg) scale(1.1);
     background-color: white;
-    color: #006eff;
+    color: black;
 }
 
 .container-model{
