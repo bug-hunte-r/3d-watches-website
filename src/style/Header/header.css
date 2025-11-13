@@ -35,12 +35,6 @@
     transition: 0.4s;
 }
 
-.btn-header:hover{
-    transform: rotate(8deg) scale(1.1);
-    background-color: white;
-    color: black;
-}
-
 .container-model{
     width: 50%;
     height: 80%;

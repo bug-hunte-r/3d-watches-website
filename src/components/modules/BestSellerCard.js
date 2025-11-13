@@ -9,9 +9,9 @@ import gsap from 'gsap'
 function BestSellerCard() {
 
     const products = [
-        { id: 1, img: '/imgs/img.avif', title: 'Casio Watch', desc: 'The best and strongest watch in the world', price: 100 },
-        { id: 2, img: '/imgs/watch2.png', title: 'Huawei Watch', desc: 'The smartest and cleaner watch in the world', price: 136 },
-        { id: 3, img: '/imgs/watch3.webp', title: 'Apple Watch', desc: 'The strongest and biggest watch in the world', price: 198 }
+        { id: 1, img: '/imgs/img.avif', title: 'Casio Watch', desc: 'The best and strongest watch', price: 100 },
+        { id: 2, img: '/imgs/watch2.png', title: 'Huawei Watch', desc: 'The smartest and cleaner watch', price: 136 },
+        { id: 3, img: '/imgs/watch3.webp', title: 'Apple Watch', desc: 'The strongest and biggest watch', price: 198 }
     ]
 
     useEffect(() => {
