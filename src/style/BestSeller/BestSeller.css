@@ -44,10 +44,6 @@
     box-shadow: 0.1px 0.1px 5px 1px white inset;
 }
 
-.best-seller-cards:hover{
-    margin-top: -30px;
-}
-
 .img-best-seller-card {
     width: calc(12vw + 20px);
     height: calc(12vw + 20px);

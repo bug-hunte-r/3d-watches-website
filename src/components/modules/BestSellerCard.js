@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import style from '../../style/BestSeller/BestSeller.css'
 import media from '../../style/BestSeller/mediaBestSeller.css'
 import Image from 'next/image'
-import _ScrollTrigger from 'gsap/ScrollTrigger'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
 
 function BestSellerCard() {
@@ -15,9 +15,9 @@ function BestSellerCard() {
   ]
 
   useEffect(() => {
-    gsap.registerPlugin(_ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-    _ScrollTrigger.batch(".best-seller-cards", {
+    ScrollTrigger.batch(".best-seller-cards", {
       onEnter: (batch) => {
         gsap.to(batch, {
           opacity: 1,
@@ -34,8 +34,8 @@ function BestSellerCard() {
           stagger: 0.5,
         });
       },
-      start: "top 70%",
-      end: "bottom 30%",
+      start: "top 80%",
+      end: "bottom 50%",
     });
   }, []);
 

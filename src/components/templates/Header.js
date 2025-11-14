@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import * as THREE from "three"
 import { gsap } from "gsap"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
@@ -8,7 +8,7 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import style from '../../style/Header/header.css'
 import media from '../../style/Header/mediaHeader.css'
 import Nav from './Nav'
-import _ScrollTrigger from 'gsap/ScrollTrigger'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 function Header() {
 
@@ -34,7 +34,8 @@ function Header() {
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableZoom = false
     controls.enablePan = false
-    controls.enableDamping = true
+    // controls.enableDamping = true
+    controls.enableRotate = false;
 
     const light = new THREE.AmbientLight(0xffffff, 5)
     scene.add(light)
@@ -96,9 +97,9 @@ function Header() {
         opacity: 1
       })
 
-      gsap.registerPlugin(_ScrollTrigger)
+      gsap.registerPlugin(ScrollTrigger)
 
-      _ScrollTrigger.create({
+      ScrollTrigger.create({
         trigger: "#scroll-section",
         start: "top top",
         end: "+=2000",
@@ -107,7 +108,7 @@ function Header() {
         onUpdate: (self) => {
           const p = self.progress
 
-          model.position.y = -1 * p * 2
+          model.position.y = -1 * p * 1
           model.rotation.y = p * Math.PI * 0.5
         }
       })
