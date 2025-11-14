@@ -8,6 +8,7 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import style from '../../style/Header/header.css'
 import media from '../../style/Header/mediaHeader.css'
 import Nav from './Nav'
+import _ScrollTrigger from 'gsap/ScrollTrigger'
 
 function Header() {
 
@@ -24,6 +25,7 @@ function Header() {
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 100)
     camera.position.z = 4
+    camera.position.x = 0.1
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     renderer.setSize(width, height)
@@ -94,6 +96,22 @@ function Header() {
         opacity: 1
       })
 
+      gsap.registerPlugin(_ScrollTrigger)
+
+      _ScrollTrigger.create({
+        trigger: "#scroll-section",
+        start: "top top",
+        end: "+=2000",
+        scrub: true,
+        pin: true,
+        onUpdate: (self) => {
+          const p = self.progress
+
+          model.position.y = -1 * p * 2
+          model.rotation.y = p * Math.PI * 0.5
+        }
+      })
+
     })
 
     const animate = () => {
@@ -112,7 +130,7 @@ function Header() {
           <h1 className='title-header'>The Perfect Moment Between Past And Future</h1>
           <button className='btn-header'>Buy Now</button>
         </div>
-        <div className='container-model' ref={watchDiv}></div>
+        <div className='container-model' ref={watchDiv} id="scroll-section"></div>
       </header>
     </div>
   )
