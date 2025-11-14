@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="hyperSpeed">
-        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
           <LiquidChrome
             baseColor={[0, 0.6, 0.7]}
             speed={0.8}

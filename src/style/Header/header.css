@@ -24,7 +24,7 @@
 .btn-header {
     backdrop-filter: blur(100px);
     border: 1px solid rgba(255, 255, 255, 0.658);
-    box-shadow: 0.1px 0.1px 5px 5px skyblue inset;
+    box-shadow: 0.1px 0.1px 3px 3px skyblue inset;
     color: white;
     background-color: transparent;
     font-size: calc(1vw + 10px);
