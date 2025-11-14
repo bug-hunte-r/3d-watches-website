@@ -44,7 +44,26 @@ function Header() {
     loader.setDRACOLoader(dracoLoader);
     loader.load('./models/watch-draco.glb', (gltf) => {
       const model = gltf.scene
-      model.scale.set(55, 55, 55)
+      if (window.innerWidth < 900) {
+        model.scale.set(52, 52, 52)
+      }
+
+      if (window.innerWidth < 850) {
+        model.scale.set(50, 50, 50)
+      }
+
+      if (window.innerWidth < 790) {
+        model.scale.set(47, 47, 47)
+      }
+
+      if (window.innerWidth < 740) {
+        model.scale.set(46, 46, 46)
+      }
+
+      if (window.innerWidth <= 720) {
+        model.scale.set(55, 55, 55)
+      }
+
       model.rotation.x = 0.6
 
       model.traverse((child) => {
@@ -101,8 +120,8 @@ function Header() {
             const p = self.progress
 
             model.position.y = -1 * p * 1
-            model.position.x = -1 * p * 1
-            model.rotation.y = p * Math.PI * 0.5
+            // model.position.x = -1 * p * -1
+            model.rotation.y = p * Math.PI * -0.5
           }
         })
       }
