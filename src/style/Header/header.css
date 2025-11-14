@@ -23,7 +23,6 @@
 
 .btn-header {
     backdrop-filter: blur(100px);
-    /* border: 1px solid rgba(255, 255, 255, 0.658); */
     border: none;
     box-shadow: 0.1px 0.1px 5px 1px white inset;
     color: white;
@@ -40,5 +39,4 @@
 .container-model{
     width: 50%;
     height: 80%;
-    cursor: pointer;
 }

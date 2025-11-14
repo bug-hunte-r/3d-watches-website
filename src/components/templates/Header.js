@@ -14,7 +14,6 @@ function Header() {
 
   const mountRef = useRef(null)
   const watchDiv = useRef(null)
-  const headerRef = useRef(null)
 
   useEffect(() => {
 
@@ -34,8 +33,7 @@ function Header() {
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableZoom = false
     controls.enablePan = false
-    // controls.enableDamping = true
-    controls.enableRotate = false;
+    controls.enableDamping = true;
 
     const light = new THREE.AmbientLight(0xffffff, 5)
     scene.add(light)
@@ -54,16 +52,7 @@ function Header() {
         if (child.name === 'wmnqxNpNCdRfDfA') {
           child.parent.remove(child)
 
-        } else if (child.name === 'KZLnjqsQgoygPoi') {
-          child.material.color.set('#ffffff')
-
-        } else if (child.name === 'ARsYRDtRfaqRvjc') {
-          child.material.color.set('#ffffff')
-
-        } else if (child.name === 'slfmzSCVEebgEnx') {
-          child.material.color.set('#ffffff')
-
-        } else if (child.name === 'cUdLcKThVrgrQtG') {
+        } else if (child.name === 'KZLnjqsQgoygPoi' || child.name === 'ARsYRDtRfaqRvjc' || child.name === 'slfmzSCVEebgEnx' || child.name === 'cUdLcKThVrgrQtG') {
           child.material.color.set('#ffffff')
 
         } else if (child.isMesh && child.name === "yFPJxjHCZaMTTSP" || child.isMesh && child.name === "hFurRdLJljkLFkB") {
@@ -76,7 +65,6 @@ function Header() {
           mat.color.set("#ffffff");
           mat.needsUpdate = true;
         }
-
       })
 
       scene.add(model)
@@ -99,20 +87,25 @@ function Header() {
 
       gsap.registerPlugin(ScrollTrigger)
 
-      ScrollTrigger.create({
-        trigger: "#scroll-section",
-        start: "top top",
-        end: "+=2000",
-        scrub: true,
-        pin: true,
-        onUpdate: (self) => {
-          const p = self.progress
+      const isMobile = window.innerWidth > 720
 
-          model.position.y = -1 * p * 1
-          model.rotation.y = p * Math.PI * 0.5
-        }
-      })
+      if (isMobile) {
+        controls.enableRotate = false
+        ScrollTrigger.create({
+          trigger: "#scroll-section",
+          start: "top top",
+          end: "+=2000",
+          scrub: true,
+          pin: true,
+          onUpdate: (self) => {
+            const p = self.progress
 
+            model.position.y = -1 * p * 1
+            model.position.x = -1 * p * 1
+            model.rotation.y = p * Math.PI * 0.5
+          }
+        })
+      }
     })
 
     const animate = () => {
@@ -126,7 +119,7 @@ function Header() {
   return (
     <div className='container'>
       <Nav />
-      <header className='header' ref={headerRef}>
+      <header className='header' ref={mountRef}>
         <div className='container-texts-header'>
           <h1 className='title-header'>The Perfect Moment Between Past And Future</h1>
           <button className='btn-header'>Buy Now</button>
