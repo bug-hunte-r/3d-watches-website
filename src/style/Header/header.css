@@ -22,11 +22,12 @@
 }
 
 .btn-header {
+    backdrop-filter: blur(100px);
+    border: 1px solid rgba(255, 255, 255, 0.658);
+    box-shadow: 0.1px 0.1px 5px 5px skyblue inset;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.356);
-    backdrop-filter: blur(20px);
-    font-size: calc(1vw + 10px);
     background-color: transparent;
+    font-size: calc(1vw + 10px);
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
     cursor: pointer;

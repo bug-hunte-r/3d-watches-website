@@ -9,8 +9,9 @@
     position: fixed;
     top: 10px;
     justify-content: space-between;
-    border: 1px solid rgba(255, 255, 255, 0.356);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
+    border: 1px solid rgba(255, 255, 255, 0.658);
+    box-shadow: 0.1px 0.1px 5px 5px skyblue inset;
 }
 
 .logo{
