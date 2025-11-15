@@ -17,18 +17,26 @@
 .title-counter{
     color: white;
     font-family: neo;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 300;
 }
 
 .number-counter{
     color: rgb(185, 110, 255);
     font-family: neo;
-    font-size: 28px;
+    font-size: 23px;
     font-weight: 500;
 }
 
 .container-text-and-number-counter{
     display: flex;
     gap: 10px;
+}
+
+.main-title-counter{
+    font-size: 40px;
+    color: white;
+    border-bottom: 3px solid white;
+    border-radius: 10px;
+    margin-top: 40px;
 }
