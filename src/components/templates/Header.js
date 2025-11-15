@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from "three"
 import { gsap } from "gsap"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
@@ -44,6 +44,11 @@ function Header() {
     loader.setDRACOLoader(dracoLoader);
     loader.load('./models/watch-draco.glb', (gltf) => {
       const model = gltf.scene
+
+      if (window.innerWidth > 900) {
+        model.scale.set(55, 55, 55)
+      }
+
       if (window.innerWidth < 900) {
         model.scale.set(52, 52, 52)
       }
@@ -113,15 +118,14 @@ function Header() {
         ScrollTrigger.create({
           trigger: "#scroll-section",
           start: "top top",
-          end: "+=2000",
+          end: "+=1100",
           scrub: true,
           pin: true,
           onUpdate: (self) => {
-            const p = self.progress
+            let p = self.progress
 
-            model.position.y = -1 * p * 1
-            // model.position.x = -1 * p * -1
-            model.rotation.y = p * Math.PI * -0.5
+            model.position.y = -1 * p * 0.5
+            model.rotation.y = p * Math.PI * -0.3
           }
         })
       }
