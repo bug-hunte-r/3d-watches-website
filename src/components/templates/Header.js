@@ -118,7 +118,7 @@ function Header() {
         ScrollTrigger.create({
           trigger: "#scroll-section",
           start: "top top",
-          end: "+=1100",
+          end: "+=1200",
           scrub: true,
           pin: true,
           onUpdate: (self) => {
