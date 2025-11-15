@@ -35,7 +35,7 @@
     overflow: visible;
     justify-content: space-evenly;
     border-radius: 20px;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(15px);
     opacity: 0;
     transform: translateY(50px);
     transition: 0.4s;
