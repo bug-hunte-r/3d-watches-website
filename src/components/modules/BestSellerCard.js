@@ -30,12 +30,12 @@ function BestSellerCard() {
         gsap.to(batch, {
           opacity: 0,
           y: 50,
-          duration: 0.5,
-          stagger: 0.5,
+          duration: 0.1,
+          stagger: 0.1,
         });
       },
       start: "top 80%",
-      end: "bottom 50%",
+      end: "bottom 30%",
     });
   }, []);
 
