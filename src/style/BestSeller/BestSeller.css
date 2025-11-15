@@ -40,7 +40,6 @@
     transform: translateY(50px);
     transition: 0.4s;
     cursor: pointer;
-    /* border: 1px solid rgba(255, 255, 255, 0.658); */
     box-shadow: 0.1px 0.1px 5px 1px white inset;
 }
 

@@ -2,7 +2,6 @@
     width: 100%;
     height: 300px;
     backdrop-filter: blur(100px);
-    border: 1px solid rgba(255, 255, 255, 0.185);
     box-shadow: 0.1px 0.1px 5px 1px white inset;
     border-radius: 10px;
     padding: 20px;
@@ -18,14 +17,14 @@
 .title-counter{
     color: white;
     font-family: neo;
-    font-size: calc(2vw + 7px);
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 300;
 }
 
 .number-counter{
-    color: gray;
+    color: rgb(185, 110, 255);
     font-family: neo;
-    font-size: calc(2vw + 7px);
+    font-size: 28px;
     font-weight: 500;
 }
 

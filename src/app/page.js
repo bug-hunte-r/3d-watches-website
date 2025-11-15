@@ -12,12 +12,12 @@ export default function Home() {
       <div className="background">
         <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
           <FloatingLines
-            enabledWaves={['top', 'middle', 'bottom']}
+            enabledWaves={[ 'middle']}
             // Array - specify line count per wave; Number - same count for all waves
             lineCount={[20, 20, 20]}
             // Array - specify line distance per wave; Number - same distance for all waves
-            lineDistance={[100, 100, 100]}
-            bendRadius={30}
+            lineDistance={[80, 80, 80]}
+            bendRadius={10}
             bendStrength={-0.5}
             interactive={false}
             parallax={false}

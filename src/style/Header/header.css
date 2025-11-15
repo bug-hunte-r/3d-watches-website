@@ -13,6 +13,10 @@
     justify-content: center;
     width: 50%;
     opacity: 0;
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0.1px 0.1px 5px 1px white inset;
 }
 
 .title-header {
@@ -22,7 +26,7 @@
 }
 
 .btn-header {
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(200px);
     border: none;
     box-shadow: 0.1px 0.1px 5px 1px white inset;
     color: white;
@@ -36,7 +40,7 @@
     transition: 0.4s;
 }
 
-.container-model{
+.container-model {
     width: 50%;
     height: 80%;
 }
