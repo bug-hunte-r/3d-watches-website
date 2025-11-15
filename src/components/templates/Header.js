@@ -124,8 +124,8 @@ function Header() {
           onUpdate: (self) => {
             let p = self.progress
 
-            model.position.y = -1 * p * 0.5
-            model.rotation.y = p * Math.PI * -0.3
+            model.position.y = -1 * p * 0.4
+            model.rotation.y = p * Math.PI * -0.2
           }
         })
       }
