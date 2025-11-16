@@ -52,5 +52,6 @@
 @media only screen and (max-width: 720px) {
     .container-counter {
         align-items: center;
+        padding-left: 0;
     }
 }

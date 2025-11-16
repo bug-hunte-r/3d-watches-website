@@ -26,7 +26,6 @@ export default function Home() {
             parallax={false}
           />
         </div>
-
       </div>
       <Header targetRef={targetRef} />
       <BestSeller />
