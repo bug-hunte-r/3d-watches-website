@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from "three"
 import { gsap } from "gsap"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
@@ -10,12 +10,20 @@ import media from '../../style/Header/mediaHeader.css'
 import Nav from './Nav'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
+
 function Header({ targetRef }) {
 
   const mountRef = useRef(null)
   const watchDiv = useRef(null)
 
   useEffect(() => {
+
+    if (!localStorage.getItem("pageReloaded")) {
+      localStorage.setItem("pageReloaded", "true");
+      window.location.reload();
+    } else {
+      localStorage.removeItem("pageReloaded"); // بعد از reload دفعه بعد آماده میشه
+    }
 
     const container = watchDiv.current
     const width = container.clientWidth
@@ -40,9 +48,9 @@ function Header({ targetRef }) {
 
     const loader = new GLTFLoader()
     const dracoLoader = new DRACOLoader()
-    dracoLoader.setDecoderPath('./draco/');
+    dracoLoader.setDecoderPath('/draco/');
     loader.setDRACOLoader(dracoLoader);
-    loader.load('./models/watch-draco.glb', (gltf) => {
+    loader.load('/models/watch-draco.glb', (gltf) => {
       const model = gltf.scene
 
       if (window.innerWidth > 900) {

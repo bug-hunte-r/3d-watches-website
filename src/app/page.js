@@ -1,15 +1,15 @@
 "use client"
-import Header from "../components/templates/Header"
 import BestSeller from "@/components/templates/BestSeller";
 import './globals.css'
 import Counter from "@/components/templates/Counter";
 import FloatingLines from "@/anim/FloatingLines";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
+import Header from "@/components/templates/Header";
 
 export default function Home() {
-
   const targetRef = useRef(null)
-
+  
   return (
     <>
       <div className="background">
