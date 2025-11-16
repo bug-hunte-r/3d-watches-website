@@ -12,7 +12,7 @@ function Signup() {
                 <Silk
                     speed={5}
                     scale={1}
-                    color="#5227ff"
+                    color="#3300ff"
                     noiseIntensity={0}
                     rotation={0}
                 />

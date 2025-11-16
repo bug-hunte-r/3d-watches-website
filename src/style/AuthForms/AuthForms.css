@@ -1,6 +1,6 @@
 .container-form{
-    border: 2px solid white;
-    border-radius: 10px;
+    /* border: 2px solid white; */
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +12,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0.1px 0.1px 10px 5px inset #4b4bff;
 }
 
 .container-title-and-back-icon-form{
@@ -40,7 +41,9 @@
 }
 
 .inputs-form{
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    border: none;
+    box-shadow: 0.1px 0.1px 10px 1px inset #4b4bff;
     border-radius: 7px;
     background-color: transparent;
     color: white;
@@ -50,9 +53,14 @@
     outline: none;
 }
 
+.inputs-form::placeholder{
+    color: rgb(158, 158, 158);
+}
+
 .btn-form{
     background-color: transparent;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    border: none;
     border-radius: 7px;
     color: white;
     font-family: neo;
@@ -60,6 +68,8 @@
     font-size: 17px;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: 0.1px 0.1px 8px 1px inset #4b4bff;
+    font-weight: 300;
 }
 
 .btn-form:hover{
@@ -75,10 +85,10 @@
 }
 
 .link-under-form{
-    color: gray;
+    color: #4b4bff;
     font-family: neo;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 500;
     text-decoration: none;
 }
 
