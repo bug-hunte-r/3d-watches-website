@@ -1,13 +1,14 @@
-import React from 'react'
+"use client"
+import React, { forwardRef } from 'react'
 import style from '../../style/Counter/Counter.css'
 import media from '../../style/Counter/mediaCounter.css'
 import CountUp from '@/anim/CountUp'
 
-function Counter() {
+const Counter = forwardRef((props, ref) => {
     return (
         <div className='container'>
+            <div className='container-counter' ref={ref}>
             <h2 className='main-title-counter'>We Have</h2>
-            <div className='container-counter'>
                 <div className='container-text-and-number-counter'>
                     <CountUp from={0} to={252} separator="," direction="up" duration={2} className="number-counter" />
                     <h1 className='title-counter'>happy customers</h1>
@@ -23,6 +24,6 @@ function Counter() {
             </div>
         </div>
     )
-}
+});
 
 export default Counter

@@ -4,8 +4,11 @@ import BestSeller from "@/components/templates/BestSeller";
 import './globals.css'
 import Counter from "@/components/templates/Counter";
 import FloatingLines from "@/anim/FloatingLines";
+import { useRef } from "react";
 
 export default function Home() {
+
+  const targetRef = useRef(null)
 
   return (
     <>
@@ -25,9 +28,9 @@ export default function Home() {
         </div>
 
       </div>
-      <Header />
+      <Header targetRef={targetRef} />
       <BestSeller />
-      <Counter />
+      <Counter ref={targetRef} />
     </>
   )
 }

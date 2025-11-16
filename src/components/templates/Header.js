@@ -10,7 +10,7 @@ import media from '../../style/Header/mediaHeader.css'
 import Nav from './Nav'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
-function Header() {
+function Header({ targetRef }) {
 
   const mountRef = useRef(null)
   const watchDiv = useRef(null)
@@ -112,50 +112,21 @@ function Header() {
       gsap.registerPlugin(ScrollTrigger)
 
       const isMobile = window.innerWidth > 720
-      const isMoreThan620 = window.innerHeight > 620
-      const isMoreThan1299 = window.innerWidth > 1299
-      const isMoreThan708 = window.innerHeight > 708
-      const isMoreThan759 = window.innerHeight > 759
-      const isMoreThan814 = window.innerHeight > 814
-      const isMoreThan871 = window.innerHeight > 871
-      const isMoreThan930 = window.innerHeight > 930
-
-      let end;
-
-      if (isMoreThan620) {
-        end = "+=1250"
-      }
-
-      if (isMoreThan1299) {
-        end = "+=1300"
-      }
-
-      if (isMoreThan708) {
-        end = "+=1350"
-      }
-
-      if (isMoreThan759) {
-        end = "+=1400"
-      }
-
-      if (isMoreThan814) {
-        end = "+=1450"
-      }
-
-      if (isMoreThan871) {
-        end = "+=1500"
-      }
-
-      if (isMoreThan930) {
-        end = "+=1650"
-      }
 
       if (isMobile) {
         controls.enableRotate = false
         ScrollTrigger.create({
           trigger: "#scroll-section",
-          start: "top top",
-          end,
+          start: window.innerHeight > 1004 ? "top 5" : "top top",
+          end: () => {
+            const target = targetRef.current;
+            const trigger = document.querySelector("#scroll-section");
+
+            const targetTop = target?.getBoundingClientRect().top + window.scrollY;
+            const triggerTop = trigger?.getBoundingClientRect().top + window.scrollY;
+
+            return targetTop - triggerTop;
+          },
           scrub: true,
           pin: true,
           onUpdate: (self) => {

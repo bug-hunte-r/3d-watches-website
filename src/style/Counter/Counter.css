@@ -5,8 +5,9 @@
     box-shadow: 0.1px 0.1px 5px 1px white inset;
     border-radius: 10px;
     padding: 20px;
+    padding-left: 50px;
     z-index: -1;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -36,7 +37,6 @@
 .main-title-counter{
     font-size: 40px;
     color: white;
-    border-bottom: 3px solid white;
-    border-radius: 10px;
-    margin-top: 40px;
+    font-family: neo;
+    font-weight: 500;
 }
