@@ -14,7 +14,7 @@ function Nav() {
                 <Link href="/" className="nav-links">Shop</Link>
             </div>
             <div className="container-nav-icons">
-                <CiUser className="nav-icons" />
+                <Link href={'/Signup'}><CiUser className="nav-icons" /></Link>
                 <CiShoppingCart className="nav-icons" />
             </div>
         </nav>
