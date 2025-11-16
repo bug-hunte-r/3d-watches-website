@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 500px;
-    height: 70vh;
+    height: 500px;
     background-color: transparent;
     position: absolute;
     top: 50%;
@@ -20,21 +20,23 @@
     width: 100%;
 }
 
-
 .icon-back-form{
     color: white;
-    font-size: calc(1vw + 20px);
+    font-size: 20px;
     cursor: pointer;
     position: absolute;
+    display: flex;
     left: 20px;
+    align-self: center;
 }
 
 .title-form{
     color: white;
     font-family: neo;
-    font-size: calc(2vw + 20px);
+    font-size: 40px;
     font-weight: 500;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inputs-form{
@@ -44,7 +46,7 @@
     color: white;
     font-family: neo;
     padding: 10px;
-    font-size: calc(1vw + 7px);
+    font-size: 20px;
     outline: none;
 }
 
@@ -55,7 +57,7 @@
     color: white;
     font-family: neo;
     padding: 10px 20px 10px 20px;
-    font-size: calc(1vw + 6px);
+    font-size: 17px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -68,14 +70,14 @@
 .text-under-form{
     color: white;
     font-family: neo;
-    font-size: calc(1vw + 5px);
+    font-size: 17px;
     font-weight: 300;
 }
 
 .link-under-form{
     color: gray;
     font-family: neo;
-    font-size: calc(1vw + 5px);
+    font-size: 17px;
     font-weight: 300;
     text-decoration: none;
 }

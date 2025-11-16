@@ -1,0 +1,86 @@
+@media only screen and (max-width: 530px) {
+
+    .container-form {
+        width: 95vw;
+        height: 70vh;
+    }
+
+    .icon-back-form {
+        font-size: calc(1vw + 20px);
+    }
+
+    .title-form {
+        font-size: calc(3vw + 30px);
+    }
+
+    .inputs-form {
+        font-size: calc(1vw + 15px);
+        width: 80%;
+    }
+
+    .btn-form {
+        font-size: calc(1vw + 13px);
+    }
+
+    .text-under-form {
+        font-size: calc(1vw + 13px);
+    }
+
+    .link-under-form {
+        font-size: calc(1vw + 13px);
+    }
+}
+
+@media only screen and (min-width: 1290px) {
+
+    .container-form {
+        width: 50vw;
+        height: 90vh;
+    }
+
+    .icon-back-form {
+        font-size: calc(1vw + 10px);
+    }
+
+    .title-form {
+        font-size: calc(2vw + 20px);
+    }
+
+    .inputs-form {
+        font-size: calc(1vw + 10px);
+        width: 80%;
+    }
+
+    .btn-form {
+        font-size: calc(1vw + 8px);
+    }
+
+    .text-under-form {
+        font-size: calc(1vw + 5px);
+    }
+
+    .link-under-form {
+        font-size: calc(1vw + 5px);
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .inputs-form {
+        padding: 15px;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .inputs-form {
+        padding: 20px;
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (min-width: 2300px) {
+    .inputs-form {
+        padding: 25px;
+        border-radius: 20px;
+    }
+}
