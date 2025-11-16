@@ -18,7 +18,7 @@ function Login() {
                 />
             </div>
             <div className='container'>
-                <div className='container-form'>
+                <div className='container-form login-from'>
                     <div className='container-title-and-back-icon-form'>
                         <Link href={'/'}><IoIosArrowBack className='icon-back-form' /></Link>
                         <h1 className='title-form'>Login</h1>
