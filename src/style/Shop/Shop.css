@@ -86,3 +86,39 @@
     cursor: pointer;
     transition: 0.4s;
 }
+
+.container-whatches-category{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.container-classic-watches{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0.1px 0.1px 8px 1px inset white;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.title-classic-watches{
+    font-family: neo;
+    color: white;
+    font-size: calc(2vw + 15px);
+    font-weight: 500;
+}
+
+.img-classic-watch{
+    width: calc(20vw + 10px);
+    height: calc(20vw + 10px);
+    object-fit: cover;
+}
