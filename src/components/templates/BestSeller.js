@@ -22,7 +22,6 @@ function BestSeller() {
                 toggleActions: "play none none reverse",
             },
         });
-
     }, [])
 
     return (
