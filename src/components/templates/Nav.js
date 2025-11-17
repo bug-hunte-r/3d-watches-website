@@ -7,7 +7,6 @@ import Link from "next/link"
 import { usePathname } from 'next/navigation';
 
 function Nav() {
-
     const path = usePathname()
 
     return (

@@ -17,33 +17,33 @@ function ShopCard() {
     { id: 6, img: '/imgs/watch3.webp', title: 'Apple Watch', desc: 'The strongest and biggest watch', price: 198 },
     { id: 7, img: '/imgs/watch3.webp', title: 'Apple Watch', desc: 'The strongest and biggest watch', price: 198 },
     { id: 8, img: '/imgs/watch3.webp', title: 'Apple Watch', desc: 'The strongest and biggest watch', price: 198 },
+    { id: 9, img: '/imgs/watch3.webp', title: 'Apple Watch', desc: 'The strongest and biggest watch', price: 198 }
   ]
 
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-  //   ScrollTrigger.batch(".shop-cards", {
-  //     onEnter: (batch) => {
-  //       gsap.to(batch, {
-  //         opacity: 1,
-  //         y: 0,
-  //         duration: 0.5,
-  //         stagger: 0.5,
-  //       });
-  //     },
-  //     onLeaveBack: (batch) => {
-  //       gsap.to(batch, {
-  //         opacity: 0,
-  //         y: 50,
-  //         duration: 0.1,
-  //         stagger: 0.1,
-  //       });
-  //     },
-  //     start: "top 80%",
-  //     end: "bottom 30%",
-  //   });
-  // }, []);
-
+    ScrollTrigger.batch(".shop-cards", {
+      onEnter: (batch) => {
+        gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.5,
+        });
+      },
+      onLeaveBack: (batch) => {
+        gsap.to(batch, {
+          opacity: 0,
+          y: 50,
+          duration: 0.1,
+          stagger: 0.1,
+        });
+      },
+      start: "top 80%",
+      end: "bottom 30%",
+    });
+  }, []);
 
   return (
     <>
