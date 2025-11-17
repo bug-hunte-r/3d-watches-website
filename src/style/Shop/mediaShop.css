@@ -39,7 +39,6 @@
     .container-shop-cards {
         grid-template-columns: repeat(1, 400px);
         row-gap: 100px;
-        margin-top: 100px;
         height: auto;
         overflow: visible;
     }
