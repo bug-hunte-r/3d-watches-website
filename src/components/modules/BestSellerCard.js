@@ -48,7 +48,7 @@ function BestSellerCard() {
           <h3 className='title-best-seller-card'>{product.title}</h3>
           <p className='desc-best-seller-card'>{product.desc}</p>
           <p className='price-best-seller-card'>{product.price}$</p>
-          <button className='btn-best-seller-card'>Buy</button>
+          <button className='btn-best-seller-card'>See 3D</button>
         </div>
       ))}
     </>
