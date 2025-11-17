@@ -6,6 +6,7 @@ import Nav from '@/components/templates/Nav'
 import ShopCard from '@/components/modules/ShopCard'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import FloatingLines from '@/anim/FloatingLines'
 
 function Shop() {
 
@@ -26,6 +27,19 @@ function Shop() {
 
   return (
     <div className='container'>
+      <div className="background">
+        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+          <FloatingLines
+            enabledWaves={['middle']}
+            lineCount={[20, 20, 20]}
+            lineDistance={[80, 80, 80]}
+            bendRadius={10}
+            bendStrength={-0.5}
+            interactive={false}
+            parallax={false}
+          />
+        </div>
+      </div>
       <Nav />
       <div className='container-shop'>
         <h1 className='title-shop'>Shop</h1>
