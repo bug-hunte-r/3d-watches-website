@@ -1,30 +1,13 @@
 "use client"
-import React, { useEffect } from 'react'
+import React from 'react'
 import style from '../../style/Shop/Shop.css'
 import media from '../../style/Shop/mediaShop.css'
 import Nav from '@/components/templates/Nav'
 import ShopCard from '@/components/modules/ShopCard'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 import FloatingLines from '@/anim/FloatingLines'
 import Image from 'next/image'
 
 function Shop() {
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.from('.title-shop', {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".title-best-seller",
-        start: "top 90%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse",
-      },
-    });
-  }, [])
 
   return (
     <div className='container'>
@@ -53,8 +36,20 @@ function Shop() {
             <Image src={'/imgs/clas.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
           </div>
           <div className='container-classic-watches'>
-            <Image src={'/imgs/modern.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
             <h2 className='title-classic-watches'>Modern Watches</h2>
+            <Image src={'/imgs/modern.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
+          </div>
+          <div className='container-classic-watches'>
+            <h2 className='title-classic-watches'>Strong Watches</h2>
+            <Image src={'/imgs/clas2.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
+          </div>
+          <div className='container-classic-watches'>
+            <h2 className='title-classic-watches'>Samrt Watches</h2>
+            <Image src={'/imgs/smart.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
+          </div>
+          <div className='container-classic-watches'>
+            <h2 className='title-classic-watches'>Strange Watches</h2>
+            <Image src={'/imgs/strange.png'} width={500} height={500} alt='classic' className='img-classic-watch' />
           </div>
         </div>
       </div>
