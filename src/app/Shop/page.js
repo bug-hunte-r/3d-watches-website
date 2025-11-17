@@ -52,10 +52,10 @@ function Shop() {
             <h2 className='title-classic-watches'>Classical Watches</h2>
             <Image src={'/imgs/clas.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
           </div>
-          {/* <div className='container-classic-watches'>
+          <div className='container-classic-watches'>
+            <Image src={'/imgs/modern.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
             <h2 className='title-classic-watches'>Modern Watches</h2>
-            <Image src={'/imgs/classic.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

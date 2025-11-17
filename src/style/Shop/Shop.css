@@ -1,4 +1,4 @@
-.container-shop{
+.container-shop {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     margin-top: 120px;
 }
 
-.title-shop{
+.title-shop {
     color: white;
     font-size: 40px;
     border-bottom: 2px solid white;
@@ -14,7 +14,7 @@
     width: fit-content;
 }
 
-.container-shop-cards{
+.container-shop-cards {
     width: 100%;
     height: max-content;
     display: grid;
@@ -87,7 +87,7 @@
     transition: 0.4s;
 }
 
-.container-whatches-category{
+.container-whatches-category {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -97,7 +97,7 @@
     margin-top: 100px;
 }
 
-.container-classic-watches{
+.container-classic-watches {
     width: 100%;
     display: flex;
     align-items: center;
@@ -106,18 +106,19 @@
     border-radius: 20px;
     box-shadow: 0.1px 0.1px 8px 1px inset white;
     cursor: pointer;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
 }
 
-.title-classic-watches{
+.title-classic-watches {
     font-family: neo;
     color: white;
     font-size: calc(2vw + 15px);
     font-weight: 500;
 }
 
-.img-classic-watch{
+.img-classic-watch {
     width: calc(20vw + 10px);
     height: calc(20vw + 10px);
     object-fit: cover;
