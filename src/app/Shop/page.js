@@ -7,6 +7,7 @@ import ShopCard from '@/components/modules/ShopCard'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import FloatingLines from '@/anim/FloatingLines'
+import Image from 'next/image'
 
 function Shop() {
 
@@ -45,6 +46,16 @@ function Shop() {
         <h1 className='title-shop'>Shop</h1>
         <div className='container-shop-cards'>
           <ShopCard />
+        </div>
+        <div className='container-whatches-category'>
+          <div className='container-classic-watches'>
+            <h2 className='title-classic-watches'>Classical Watches</h2>
+            <Image src={'/imgs/classic.webp'} width={500} height={500} alt='classic' className='img-classic-watch' />
+          </div>
+          <div className='container-modern-watches'>
+            <h2 className='title-modern-watches'>Modern Watches</h2>
+            <Image src={'/imgs/modern.webp'} width={500} height={500} alt='modern' className='img-modern-watch' />
+          </div>
         </div>
       </div>
     </div>
