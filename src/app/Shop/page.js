@@ -1,13 +1,40 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from '../../style/Shop/Shop.css'
 import media from '../../style/Shop/mediaShop.css'
 import Nav from '@/components/templates/Nav'
 import ShopCard from '@/components/modules/ShopCard'
 import FloatingLines from '@/anim/FloatingLines'
 import Image from 'next/image'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 function Shop() {
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.batch(".container-classic-watches", {
+      onEnter: (batch) => {
+        gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.5,
+        });
+      },
+      onLeaveBack: (batch) => {
+        gsap.to(batch, {
+          opacity: 0,
+          y: 50,
+          duration: 0.1,
+          stagger: 0.1,
+        });
+      },
+      start: "top 90%",
+      end: "bottom 20%",
+    });
+  }, []);
 
   return (
     <div className='container'>
