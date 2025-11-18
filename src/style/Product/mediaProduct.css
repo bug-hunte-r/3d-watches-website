@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
     .container-product-detail{
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: max-content;
     }
 

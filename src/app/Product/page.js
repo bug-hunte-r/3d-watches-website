@@ -16,12 +16,12 @@ function Product() {
 
   useEffect(() => {
 
-    // if (!localStorage.getItem("pageReloaded")) {
-    //   localStorage.setItem("pageReloaded", "true");
-    //   window.location.reload();
-    // } else {
-    //   localStorage.removeItem("pageReloaded");
-    // }
+    if (!localStorage.getItem("pageReloaded")) {
+      localStorage.setItem("pageReloaded", "true");
+      window.location.reload();
+    } else {
+      localStorage.removeItem("pageReloaded");
+    }
 
     const container = watchDiv.current
     const width = container?.clientWidth
@@ -29,7 +29,7 @@ function Product() {
 
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 100)
-    camera.position.z = 4
+    camera.position.z = 50
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     renderer.setSize(width, height)
@@ -43,11 +43,10 @@ function Product() {
     scene.add(light)
 
     const loader = new GLTFLoader()
-    loader.load('./models/watch.glb', (gltf) => {
+    loader.load('./models/watch9.glb', (gltf) => {
       const model = gltf.scene
-      model.scale.set(35, 35, 35)
-      model.rotation.y = 0.3
-      model.position.x = -0.4
+      model.scale.set(2, 2, 2)
+      model.rotation.x = 3
 
       scene.add(model)
 
