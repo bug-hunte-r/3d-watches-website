@@ -42,31 +42,36 @@ function Product() {
     const light = new THREE.AmbientLight(0xffffff, 10)
     scene.add(light)
 
-    const loader = new GLTFLoader()
-    loader.load('./models/watch9.glb', (gltf) => {
-      const model = gltf.scene
-      model.scale.set(2, 2, 2)
-      model.rotation.x = 3
+    const modelLoader = (url, scene, pos = { x: 0, y: 0, z: 0 }, rot = { x: 0, y: 0, z: 0 }, scale = 1) => {
+      const loader = new GLTFLoader();
 
-      scene.add(model)
+      loader.load(url, gltf => {
+        const model = gltf.scene;
 
-      gsap.from('.container-model-product-detail', {
-        y: -100,
-        duration: 1.5,
-        opacity: 0,
-      })
-      
-      gsap.from('.container-product-details-texts', {
-        y: -100,
-        duration: 1.5,
-      })
+        model.position.set(pos.x, pos.y, pos.z);
+        model.rotation.set(rot.x, rot.y, rot.z);
+        model.scale.set(scale, scale, scale);
 
-      gsap.to('.container-product-details-texts', {
-        duration: 1.5,
-        opacity: 1
-      })
+        scene.add(model);
 
-    })
+        gsap.from('.container-model-product-detail', {
+          y: -100,
+          duration: 1.5,
+          opacity: 0,
+        })
+
+        gsap.from('.container-product-details-texts', {
+          y: -100,
+          duration: 1.5,
+        })
+
+        gsap.to('.container-product-details-texts', {
+          duration: 1.5,
+          opacity: 1
+        })
+
+      });
+    }
 
     const animate = () => {
       requestAnimationFrame(animate)
