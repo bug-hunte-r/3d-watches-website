@@ -5,6 +5,7 @@ import media from '../../style/BestSeller/mediaBestSeller.css'
 import Image from 'next/image'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
+import Link from 'next/link'
 
 function BestSellerCard() {
 
@@ -48,7 +49,7 @@ function BestSellerCard() {
           <h3 className='title-best-seller-card'>{product.title}</h3>
           <p className='desc-best-seller-card'>{product.desc}</p>
           <p className='price-best-seller-card'>{product.price}$</p>
-          <button className='btn-best-seller-card'>See 3D</button>
+          <Link className='btn-best-seller-card' href={'/Product'}>See 3D</Link>
         </div>
       ))}
     </>

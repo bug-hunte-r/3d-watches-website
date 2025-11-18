@@ -5,6 +5,7 @@ import media from '../../style/Shop/mediaShop.css'
 import Image from 'next/image'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
+import Link from 'next/link'
 
 function ShopCard() {
 
@@ -47,7 +48,7 @@ function ShopCard() {
           <h3 className='title-shop-card'>{product.title}</h3>
           <p className='desc-shop-card'>{product.desc}</p>
           <p className='price-shop-card'>{product.price}$</p>
-          <button className='btn-shop-card'>See 3D</button>
+          <Link className='btn-shop-card' href={'/Product'}>See 3D</Link>
         </div>
       ))}
     </>

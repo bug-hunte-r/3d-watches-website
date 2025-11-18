@@ -85,6 +85,7 @@
     color: white;
     cursor: pointer;
     transition: 0.4s;
+    text-decoration: none;
 }
 
 .container-whatches-category {
