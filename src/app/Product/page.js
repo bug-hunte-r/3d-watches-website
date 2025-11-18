@@ -29,7 +29,7 @@ function Product() {
 
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 100)
-    camera.position.z = 50
+    camera.position.z = 5
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     renderer.setSize(width, height)
@@ -42,14 +42,14 @@ function Product() {
     const light = new THREE.AmbientLight(0xffffff, 10)
     scene.add(light)
 
-    const modelLoader = (url, scene, pos = { x: 0, y: 0, z: 0 }, rot = { x: 0, y: 0, z: 0 }, scale = 1) => {
+    const modelLoader = (url, position = { x: 0, y: 0, z: 0 }, rotation = { x: 0, y: 0, z: 0 }, scale = 1) => {
       const loader = new GLTFLoader();
 
       loader.load(url, gltf => {
         const model = gltf.scene;
 
-        model.position.set(pos.x, pos.y, pos.z);
-        model.rotation.set(rot.x, rot.y, rot.z);
+        model.position.set(position.x, position.y, position.z);
+        model.rotation.set(rotation.x, rotation.y, rotation.z);
         model.scale.set(scale, scale, scale);
 
         scene.add(model);
@@ -72,6 +72,8 @@ function Product() {
 
       });
     }
+
+    modelLoader('/models/watch1.glb', {x: 0, y: 0, z: 0}, {x: 0.6, y: 0, z: 0}, 64)
 
     const animate = () => {
       requestAnimationFrame(animate)
