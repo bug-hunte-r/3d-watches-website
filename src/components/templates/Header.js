@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from "three"
 import { gsap } from "gsap"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
@@ -22,7 +22,7 @@ function Header({ targetRef }) {
       localStorage.setItem("pageReloaded", "true");
       window.location.reload();
     } else {
-      localStorage.removeItem("pageReloaded"); // بعد از reload دفعه بعد آماده میشه
+      localStorage.removeItem("pageReloaded");
     }
 
     const container = watchDiv.current
