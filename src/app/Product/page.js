@@ -10,12 +10,12 @@ function Product() {
     <div className='container'>
       <Nav />
       <div className='container-product-detail'>
-        <div className='container-model-product-detail'></div>
-        <div className='container-product-detail'>
+        <div className='container-product-details-texts'>
           <h1 className='title-product-detail'>Apple Watch</h1>
           <p className='desc-product-detail'>The strongest and biggest watch</p>
           <Link href={'/'} className='btn-product-detail'>Add to cart</Link>
         </div>
+        <div className='container-model-product-detail'></div>
       </div>
     </div>
   )
