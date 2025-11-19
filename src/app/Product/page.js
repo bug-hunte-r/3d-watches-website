@@ -8,6 +8,7 @@ import * as THREE from 'three'
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import gsap from 'gsap'
+import FloatingLines from '@/anim/FloatingLines'
 
 function Product() {
 
@@ -42,38 +43,31 @@ function Product() {
     const light = new THREE.AmbientLight(0xffffff, 10)
     scene.add(light)
 
-    const modelLoader = (url, position = { x: 0, y: 0, z: 0 }, rotation = { x: 0, y: 0, z: 0 }, scale = 1) => {
-      const loader = new GLTFLoader();
+    const loader = new GLTFLoader();
+    loader.load('./models/watch1.glb', gltf => {
+      const model = gltf.scene;
+      model.rotation.x = 0.6
+      model.scale.set(60, 60, 60)
 
-      loader.load(url, gltf => {
-        const model = gltf.scene;
+      scene.add(model);
 
-        model.position.set(position.x, position.y, position.z);
-        model.rotation.set(rotation.x, rotation.y, rotation.z);
-        model.scale.set(scale, scale, scale);
+      gsap.from('.container-model-product-detail', {
+        y: -100,
+        duration: 1.5,
+        opacity: 0,
+      })
 
-        scene.add(model);
+      gsap.from('.container-product-details-texts', {
+        y: -100,
+        duration: 1.5,
+      })
 
-        gsap.from('.container-model-product-detail', {
-          y: -100,
-          duration: 1.5,
-          opacity: 0,
-        })
+      gsap.to('.container-product-details-texts', {
+        duration: 1.5,
+        opacity: 1
+      })
 
-        gsap.from('.container-product-details-texts', {
-          y: -100,
-          duration: 1.5,
-        })
-
-        gsap.to('.container-product-details-texts', {
-          duration: 1.5,
-          opacity: 1
-        })
-
-      });
-    }
-
-    modelLoader('/models/watch1.glb', {x: 0, y: 0, z: 0}, {x: 0.6, y: 0, z: 0}, 64)
+    });
 
     const animate = () => {
       requestAnimationFrame(animate)
@@ -85,6 +79,19 @@ function Product() {
 
   return (
     <div className='container'>
+      <div className="background">
+        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+          <FloatingLines
+            enabledWaves={['middle']}
+            lineCount={[20, 20, 20]}
+            lineDistance={[80, 80, 80]}
+            bendRadius={10}
+            bendStrength={-0.5}
+            interactive={false}
+            parallax={false}
+          />
+        </div>
+      </div>
       <Nav />
       <div className='container-product-detail' ref={mountRef}>
         <div className='container-product-details-texts'>
