@@ -25,6 +25,11 @@
     justify-content: space-evenly;
     text-align: center;
     opacity: 0;
+    /* backdrop-filter: blur(30px); */
+    border-radius: 10px;
+    /* box-shadow: 0.1px 0.1px 8px 1px inset white; */
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
 }
 
 .title-product-detail {
@@ -32,6 +37,10 @@
     font-family: neo;
     font-size: calc(2vw + 20px);
     font-weight: 500;
+    box-shadow: 0.1px 0.1px 5px 1px inset white;
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
 }
 
 .desc-product-detail {
@@ -39,6 +48,10 @@
     font-family: neo;
     font-size: calc(1vw + 20px);
     font-weight: 300;
+    box-shadow: 0.1px 0.1px 5px 1px inset white;
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
 }
 
 .btn-product-detail {
@@ -48,9 +61,10 @@
     font-size: calc(1vw + 10px);
     font-weight: 300;
     box-shadow: 0.1px 0.1px 5px 1px inset white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     transition: 0.3s;
+    backdrop-filter: blur(30px);
 }
 
 .btn-product-detail:hover{
