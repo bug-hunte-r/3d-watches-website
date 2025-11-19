@@ -13,6 +13,7 @@ function Cart() {
 
     const buyHandler = () => {
         notifBuy()
+        redirect('/')
     }
 
     return (
