@@ -77,12 +77,22 @@ body{
     font-family: neo;
     color: white;
     font-size: calc(1vw + 10px);
-    cursor: pointer;
     border: 1px solid white;
     border-radius: 5px;
     width: 30%;
-    padding: 3px;
+    padding: 5px 10px 5px 10px;
     font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-add-product{
+    cursor: pointer;
+}
+
+.btn-mines-product{
+    cursor: pointer;
 }
 
 .btn-cart{

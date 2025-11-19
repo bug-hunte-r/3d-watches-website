@@ -18,7 +18,11 @@ function CartCards() {
             <h2 className='title-product-cart-card'>{product.title}</h2>
             <p className='desc-product-cart-card'>{product.desc}</p>
             <p className='price-product-cart-card'>{product.price}$</p>
-            <div className='container-add-and-remove-product-count'>- 1 +</div>
+            <div className='container-add-and-remove-product-count'>
+              <p className='btn-add-product'>+</p>
+              <p className='product-count'>1</p>
+              <p className='btn-mines-product'>-</p>
+            </div>
           </div>
           <Image width={500} height={500} alt='watch-img' className='img-cart-card' src={product.img} />
         </div>
