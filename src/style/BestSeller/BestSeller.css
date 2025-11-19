@@ -35,12 +35,12 @@
     overflow: visible;
     justify-content: space-evenly;
     border-radius: 20px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(10px);
     transition: 0.4s;
     cursor: pointer;
-    box-shadow: 0.1px 0.1px 5px 1px white inset;
+    box-shadow: 0.1px 0.1px 10px 2px white inset;
 }
 
 .img-best-seller-card {

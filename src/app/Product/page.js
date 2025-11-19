@@ -46,7 +46,7 @@ function Product() {
     loader.load('./models/watch1.glb', gltf => {
       const model = gltf.scene;
       model.rotation.x = 0.6
-      model.scale.set(60, 60, 60)
+      model.scale.set(63, 63, 63)
 
       scene.add(model);
 

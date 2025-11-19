@@ -37,12 +37,11 @@
     overflow: visible;
     justify-content: space-evenly;
     border-radius: 20px;
-    backdrop-filter: blur(15px);
     opacity: 0;
     transform: translateY(50px);
     transition: 0.4s;
     cursor: pointer;
-    box-shadow: 0.1px 0.1px 5px 1px white inset;
+    box-shadow: 0.1px 0.1px 10px 2px white inset;
 }
 
 .img-shop-card {
@@ -105,9 +104,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    backdrop-filter: blur(20px);
     border-radius: 20px;
-    box-shadow: 0.1px 0.1px 8px 1px inset white;
+    box-shadow: 0.1px 0.1px 10px 3px inset white;
     cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;
