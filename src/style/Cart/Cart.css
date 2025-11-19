@@ -35,11 +35,13 @@ body{
     backdrop-filter: blur(20px);
     box-shadow: 0.1px 0.1px 10px 1px inset white;
     border-radius: 10px;
+    padding: 20px;
 }
 
 .img-cart-card {
     width: calc(15vw + 10px);
     height: calc(15vw + 10px);
+    object-fit: cover;
 }
 
 .container-cart-cards-texts {
@@ -54,12 +56,14 @@ body{
     font-size: calc(2vw + 5px);
     font-family: neo;
     color: white;
+    font-weight: 500;
 }
 
 .desc-product-cart-card {
     font-size: calc(1vw + 5px);
     font-family: neo;
     color: white;
+    font-weight: 300;
 }
 
 .price-product-cart-card {
@@ -77,4 +81,5 @@ body{
     border-radius: 5px;
     width: 30%;
     padding: 3px;
+    font-weight: 300;
 }
