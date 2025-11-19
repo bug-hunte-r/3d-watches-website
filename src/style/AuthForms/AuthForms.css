@@ -12,7 +12,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0.1px 0.1px 10px 5px inset #4b4bff;
+    box-shadow: 0.1px 0.1px 10px 1px inset white;
 }
 
 .login-from{
@@ -45,9 +45,8 @@
 }
 
 .inputs-form{
-    /* border: 1px solid white; */
     border: none;
-    box-shadow: 0.1px 0.1px 10px 1px inset #4b4bff;
+    box-shadow: 0.1px 0.1px 5px 1px inset white;
     border-radius: 7px;
     background-color: transparent;
     color: white;
@@ -58,12 +57,11 @@
 }
 
 .inputs-form::placeholder{
-    color: rgb(158, 158, 158);
+    color: rgb(223, 223, 223);
 }
 
 .btn-form{
     background-color: transparent;
-    /* border: 1px solid white; */
     border: none;
     border-radius: 7px;
     color: white;
@@ -72,7 +70,7 @@
     font-size: 17px;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0.1px 0.1px 8px 1px inset #4b4bff;
+    box-shadow: 0.1px 0.1px 5px 1px inset white;
     font-weight: 300;
 }
 
@@ -89,7 +87,7 @@
 }
 
 .link-under-form{
-    color: #4b4bff;
+    color: white;
     font-family: neo;
     font-size: 17px;
     font-weight: 500;

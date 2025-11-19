@@ -8,7 +8,6 @@ import * as THREE from 'three'
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import gsap from 'gsap'
-import FloatingLines from '@/anim/FloatingLines'
 
 function Product() {
 
@@ -79,19 +78,6 @@ function Product() {
 
   return (
     <div className='container'>
-      <div className="background">
-        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
-          <FloatingLines
-            enabledWaves={['middle']}
-            lineCount={[20, 20, 20]}
-            lineDistance={[80, 80, 80]}
-            bendRadius={10}
-            bendStrength={-0.5}
-            interactive={false}
-            parallax={false}
-          />
-        </div>
-      </div>
       <Nav />
       <div className='container-product-detail' ref={mountRef}>
         <div className='container-product-details-texts'>
