@@ -10,6 +10,7 @@ body{
     box-shadow: 0.1px 0.1px 10px 1px inset white;
     border-radius: 10px;
     padding: 20px;
+    text-align: center;
 }
 
 .title-cart {
@@ -82,4 +83,16 @@ body{
     width: 30%;
     padding: 3px;
     font-weight: 300;
+}
+
+.btn-cart{
+    background-color: transparent;
+    border: none;
+    box-shadow: 0.1px 0.1px 10px 1px inset white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    font-size: calc(1vw + 10px);
+    margin-top: 50px;
+    cursor: pointer;
 }

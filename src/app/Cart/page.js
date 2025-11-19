@@ -14,6 +14,7 @@ function Cart() {
                 <div className='container-cart-cards'>
                     <CartCards />
                 </div>
+                <button className='btn-cart'>Sumbit</button>
             </div>
         </div>
     )
