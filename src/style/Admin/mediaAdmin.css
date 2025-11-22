@@ -1,0 +1,17 @@
+@media only screen and (min-width: 1290px) {
+    .container-left-bar-admin{
+        width: 20%;
+    }
+
+    .username-in-side-bar{
+        font-size: calc(1vw + 10px);
+    }
+
+    .title-left-bar-items{
+        font-size: calc(1vw + 6px);
+    }
+    
+    .icons-left-bar-items{
+        font-size: calc(1vw + 15px);
+    }
+}
