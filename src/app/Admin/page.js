@@ -15,7 +15,7 @@ import { CgMenuGridO } from "react-icons/cg";
 function Admin() {
 
     const [isSideBarOpen, setIsSideBarOpen] = useState(false)
-    const [isSideBarItemActive, setIsSideBarItemActive] = useState(1)
+    const [isSideBarItemActive, setIsSideBarItemActive] = useState(2)
 
     const usersInfo = [
         { id: 1, name: 'Shayan', email: 'shayan@gmail.com', role: 'ADMIN' },
@@ -51,14 +51,14 @@ function Admin() {
                     {sideBarItems.map((item) => {
                         const Icon = item.icon
                         return (
-                            <div className={`items-left-bar-admin ${isSideBarItemActive === item.id ? 'items-left-bar-admin-active' : ''}`} key={item.id} onClick={() => {setIsSideBarItemActive(item.id); setIsSideBarOpen(false)}}>
+                            <div className={`items-left-bar-admin ${isSideBarItemActive === item.id ? 'items-left-bar-admin-active' : ''}`} key={item.id} onClick={() => { setIsSideBarItemActive(item.id); setIsSideBarOpen(false) }}>
                                 <Icon className='icons-left-bar-items' />
                                 <p className='title-left-bar-items'>{item.text}</p>
                             </div>
                         )
                     })}
                 </div>
-                <div className="user-list-container">
+                <div className={`user-list-container ${isSideBarItemActive != 1 ? 'onShow': ''}`}>
                     <h1 className='title-user-list'>Users List</h1>
                     <div className='container-titles-user-info'>
                         <p className='titles-user-infos'>Name</p>
