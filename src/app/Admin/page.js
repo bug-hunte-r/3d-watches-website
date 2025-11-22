@@ -47,6 +47,37 @@ function Admin() {
                         <p className='title-left-bar-items'>Sign out</p>
                     </div>
                 </div>
+                <div className="user-list-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>ali_m</td>
+                                <td>ali@example.com</td>
+                                <td>admin</td>
+                            </tr>
+
+                            <tr>
+                                <td>neda98</td>
+                                <td>neda@example.com</td>
+                                <td>editor</td>
+                            </tr>
+
+                            <tr>
+                                <td>reza_view</td>
+                                <td>reza@example.com</td>
+                                <td>viewer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     )
