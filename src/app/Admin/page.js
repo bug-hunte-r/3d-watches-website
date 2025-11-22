@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from '../../style/Admin/Admin.css'
 import media from '../../style/Admin/mediaAdmin.css'
 import Nav from '@/components/templates/Nav'
@@ -10,13 +10,19 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { LiaTicketAltSolid } from "react-icons/lia";
 import { BiCommentDetail } from "react-icons/bi";
 import { GoSignOut } from "react-icons/go";
+import { CgMenuGridO } from "react-icons/cg";
 
 function Admin() {
+
+    const [isSideBarOpen, setIsSideBarOpen] = useState(false)
+
     return (
         <div className='container'>
             <Nav />
+            <CgMenuGridO className='icon-menu-side-bar' onClick={() => setIsSideBarOpen(true)} />
             <div className='container-admin'>
-                <div className='container-left-bar-admin'>
+                <div className={`container-left-bar-admin ${isSideBarOpen ? 'opened-side-bar' : 'closed-side-bar'}`}>
+                    <p className='close-btn-side-bar' onClick={() => setIsSideBarOpen(false)}>X</p>
                     <h2 className='username-in-side-bar'>Welcome Shayan!</h2>
                     <div className='items-left-bar-admin items-left-bar-admin-active'>
                         <FiUsers className='icons-left-bar-items' />
@@ -48,35 +54,87 @@ function Admin() {
                     </div>
                 </div>
                 <div className="user-list-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>ali_m</td>
-                                <td>ali@example.com</td>
-                                <td>admin</td>
-                            </tr>
-
-                            <tr>
-                                <td>neda98</td>
-                                <td>neda@example.com</td>
-                                <td>editor</td>
-                            </tr>
-
-                            <tr>
-                                <td>reza_view</td>
-                                <td>reza@example.com</td>
-                                <td>viewer</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h1 className='title-user-list'>Users List</h1>
+                    <div className='container-titles-user-info'>
+                        <p className='titles-user-infos'>Name</p>
+                        <p className='titles-user-infos'>Email</p>
+                        <p className='titles-user-infos'>Role</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
+                    <div className='container-users-info'>
+                        <p className='users-info'>Shayan</p>
+                        <p className='users-info'>shayan@gmail.com</p>
+                        <p className='users-info'>Admin</p>
+                    </div>
                 </div>
             </div>
         </div>

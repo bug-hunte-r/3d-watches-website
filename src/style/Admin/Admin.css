@@ -1,20 +1,41 @@
+/* start side bar */
+
 .container-admin{
     width: 100%;
-    height: 100vh;
-    z-index: 20;
+    /* z-index: 20; */
+    display: flex;
 }
 
 .container-left-bar-admin{
-    width: 250px;
+    width: 260px;
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     font-family: neo;
     color: white;
     border-right: 1px white solid;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    transition: 0.5s;
+}
+
+.closed-side-bar{
+    transform: translateX(-100%);
+}
+.opened-side-bar{
+    transform: translateX(0%);
+}
+
+.close-btn-side-bar{
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: end;
+    font-family: riv;
+    font-size: 20px;
 }
 
 .username-in-side-bar{
@@ -27,7 +48,7 @@
     margin-top: 20px;
     display: flex;
     gap: 5px;
-    width: 88%;
+    width: 100%;
     padding: 7px;
     border-radius: 5px;
     cursor: pointer;
@@ -51,4 +72,60 @@
 
 .icons-left-bar-items{
     font-size: 25px;
+}
+
+/* start users list */
+
+.title-user-list{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-family: riv;
+    font-size: 40px;
+}
+
+.user-list-container{
+    width: 100%;
+    height: max-content;
+    font-family: neo;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 30px; */
+    box-shadow: 0.1px 0.1px 5px 3px inset white;
+    border-radius: 10px;
+    margin: 85px auto;
+}
+
+.container-titles-user-info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+.titles-user-infos{
+    font-size: calc(1vw + 17px);
+}
+
+.container-users-info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+.users-info{
+    font-size: calc(1vw + 10px);
+}
+
+.icon-menu-side-bar{
+    color: white;
+    font-size: calc(1vw + 20px);
+    display: flex;
+    align-self: flex-start;
+    cursor: pointer;
+    margin-top: 35px;
 }

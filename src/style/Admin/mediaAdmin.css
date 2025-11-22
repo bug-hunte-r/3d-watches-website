@@ -14,4 +14,22 @@
     .icons-left-bar-items{
         font-size: calc(1vw + 15px);
     }
+
+    .close-btn-side-bar{
+        font-size: calc(1vw + 5px);
+    }
+
+    .title-user-list{
+        font-size: calc(1vw + 30px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .icon-menu-side-bar{
+        margin-top: 100px;
+    }
+
+    .user-list-container{
+        margin: 20px auto;
+    }
 }
