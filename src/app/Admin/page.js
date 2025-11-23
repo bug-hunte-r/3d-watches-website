@@ -92,6 +92,8 @@ function Admin() {
                         <button className='btn-add-product'>Add</button>
                     </div>
                 </div>
+
+                
             </div>
         </div>
     )
