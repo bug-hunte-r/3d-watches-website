@@ -81,6 +81,14 @@ function Admin() {
                     <div className='container-products-in-shop-cards'>
                         <ProductsCard />
                     </div>
+                    <div className='container-add-product'>
+                        <input type='text' placeholder='Title' className='inputs-add-product' />
+                        <input type='text' placeholder='Description' className='inputs-add-product' />
+                        <input type='text' placeholder='Price' className='inputs-add-product' />
+                        <input type='text' placeholder='Count' className='inputs-add-product' />
+                        <input type='file' placeholder='3D Model' className='inputs-add-product' />
+                        <button className='btn-add-product'>Add</button>
+                    </div>
                 </div>
             </div>
         </div>
