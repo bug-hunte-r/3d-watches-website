@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import style from '../../style/Admin/Admin.css'
 import media from '../../style/Admin/mediaAdmin.css'
 import Nav from '@/components/templates/Nav'
@@ -11,6 +11,7 @@ import { LiaTicketAltSolid } from "react-icons/lia";
 import { BiCommentDetail } from "react-icons/bi";
 import { GoSignOut } from "react-icons/go";
 import { CgMenuGridO } from "react-icons/cg";
+import ProductsCard from '@/components/modules/ProductsCard'
 
 function Admin() {
 
@@ -58,7 +59,8 @@ function Admin() {
                         )
                     })}
                 </div>
-                <div className={`user-list-container ${isSideBarItemActive != 1 ? 'onShow': ''}`}>
+
+                <div className={`user-list-container ${isSideBarItemActive != 1 ? 'onShow' : ''}`}>
                     <h1 className='title-user-list'>Users List</h1>
                     <div className='container-titles-user-info'>
                         <p className='titles-user-infos'>Name</p>
@@ -72,6 +74,13 @@ function Admin() {
                             <p className='users-info'>{info.role}</p>
                         </div>
                     ))}
+                </div>
+
+                <div className='container-products-in-shop'>
+                    <h1 className='title-products-in-shop'>Products</h1>
+                    <div className='container-products-in-shop-cards'>
+                        <ProductsCard />
+                    </div>
                 </div>
             </div>
         </div>
