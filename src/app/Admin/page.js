@@ -35,10 +35,9 @@ function Admin() {
         { id: 1, text: 'Users', icon: FiUsers },
         { id: 2, text: 'Products', icon: IoWatchOutline },
         { id: 3, text: 'Profile', icon: LiaUserEditSolid },
-        { id: 4, text: 'Orders', icon: MdOutlineShoppingBag },
-        { id: 5, text: 'Tickets', icon: LiaTicketAltSolid },
-        { id: 6, text: 'Comments', icon: BiCommentDetail },
-        { id: 7, text: 'Sign out', icon: GoSignOut }
+        { id: 4, text: 'Tickets', icon: LiaTicketAltSolid },
+        { id: 5, text: 'Comments', icon: BiCommentDetail },
+        { id: 6, text: 'Sign out', icon: GoSignOut }
     ]
 
     return (
@@ -52,7 +51,7 @@ function Admin() {
                     {sideBarItems.map((item) => {
                         const Icon = item.icon
                         return (
-                            <div className={`items-left-bar-admin ${isSideBarItemActive === item.id ? 'items-left-bar-admin-active' : ''}`} key={item.id} onClick={() => { setIsSideBarItemActive(item.id); setIsSideBarOpen(false) }}>
+                            <div className={`items-left-bar-admin ${isSideBarItemActive === item.id ? 'items-left-bar-admin-active' : ''} ${item.id === 6 ? 'bottom-item' : ''}`} key={item.id} onClick={() => { setIsSideBarItemActive(item.id); setIsSideBarOpen(false) }}>
                                 <Icon className='icons-left-bar-items' />
                                 <p className='title-left-bar-items'>{item.text}</p>
                             </div>
