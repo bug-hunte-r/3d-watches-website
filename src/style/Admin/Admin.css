@@ -291,7 +291,7 @@
 
 .container-user-info-edit{
     width: 100%;
-    height: fit-content;
+    height: 100dvh;
     margin-top: 40px;
     margin-bottom: 20px;
     backdrop-filter: blur(20px);
@@ -303,10 +303,11 @@
     flex-direction: column;
     row-gap: 50px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .title-profile{
-    font-size: 40px;
+    font-size: calc(1vw + 20px);
     color: white;
 }
 
@@ -318,7 +319,7 @@
     padding: 20px;
     box-shadow: 0.1px 0.1px 10px 1px inset white;
     border: none;
-    font-size: 23px;
+    font-size: calc(1vw + 20px);
     color: white;
     background-color: transparent;
 }
@@ -334,7 +335,7 @@
     color: white;
     font-family: neo;
     padding: 10px 30px 10px 30px;
-    font-size: 20px;
+    font-size: calc(1vw + 10px);
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0.1px 0.1px 5px 2px inset white;
