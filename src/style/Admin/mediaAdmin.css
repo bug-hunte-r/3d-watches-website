@@ -26,6 +26,36 @@
     .title-products-in-shop{
         font-size: calc(1vw + 30px);
     }
+    
+    .custom-upload-file-btn{
+        font-size: calc(1vw + 10px);
+    }
+    
+    .inputs-add-product{
+        font-size: calc(1vw + 10px);
+    }
+    
+    .btn-add-product{
+        font-size: calc(1vw + 10px);
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    .inputs-add-product{
+        height: 70px;
+    }
+}
+
+@media only screen and (min-width: 1800px){
+    .inputs-add-product{
+        height: 80px;
+    }
+}
+
+@media only screen and (min-width: 2300px){
+    .inputs-add-product{
+        height: 100px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
