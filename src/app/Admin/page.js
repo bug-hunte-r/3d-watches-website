@@ -82,11 +82,13 @@ function Admin() {
                         <ProductsCard />
                     </div>
                     <div className='container-add-product'>
+                        <h2 className='title-add-product'>Add Product</h2>
                         <input type='text' placeholder='Title' className='inputs-add-product' />
                         <input type='text' placeholder='Description' className='inputs-add-product' />
-                        <input type='text' placeholder='Price' className='inputs-add-product' />
-                        <input type='text' placeholder='Count' className='inputs-add-product' />
-                        <input type='file' placeholder='3D Model' className='inputs-add-product' />
+                        <input type='number' placeholder='Price' className='inputs-add-product' />
+                        <input type='number' placeholder='Count' className='inputs-add-product' />
+                        <input type="file" id="fileInput" />
+                        <label htmlFor="fileInput" class="custom-upload-file-btn">Upload 3D Model</label>
                         <button className='btn-add-product'>Add</button>
                     </div>
                 </div>

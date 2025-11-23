@@ -93,7 +93,7 @@
     display: flex;
     flex-direction: column;
     /* padding-left: 30px; */
-    box-shadow: 0.1px 0.1px 5px 3px inset white;
+    box-shadow: 0.1px 0.1px 10px 3px inset white;
     border-radius: 10px;
     margin: 85px auto;
 }
@@ -146,7 +146,7 @@
     height: max-content;
     margin-top: 130px;
     backdrop-filter: blur(20px);
-    box-shadow: 0.1px 0.1px 10px 1px inset white;
+    box-shadow: 0.1px 0.1px 10px 3px inset white;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -216,4 +216,75 @@
     font-size: calc(1vw + 5px);
     font-family: neo;
     color: white;
+}
+
+.title-add-product{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.container-add-product{
+    width: 100%;
+    height: max-content;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+}
+
+.inputs-add-product{
+    width: 70%;
+    height: 60px;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+    box-shadow: 0.1px 0.1px 10px 1px inset white;
+    border: none;
+    font-size: 23px;
+    color: white;
+    background-color: transparent;
+}
+
+.inputs-add-product::placeholder{
+    color: #dfdfdf;
+}
+
+.inputs-add-product::-webkit-outer-spin-button,
+.inputs-add-product::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputs-add-product[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.btn-add-product{
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-family: neo;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0.1px 0.1px 5px 2px inset white;
+    font-weight: 300;
+}
+
+.custom-upload-file-btn{
+    color: white;
+    font-family: neo;
+    font-size: 25px;
+    border: 2px dashed white;
+    padding: 30px 10px 30px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#fileInput{
+    display: none;
 }
