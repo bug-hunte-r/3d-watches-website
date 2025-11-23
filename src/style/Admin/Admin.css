@@ -95,7 +95,7 @@
     /* padding-left: 30px; */
     box-shadow: 0.1px 0.1px 10px 3px inset white;
     border-radius: 10px;
-    margin: 85px auto;
+    margin: 40px auto;
 }
 
 .container-titles-user-info{
@@ -144,7 +144,8 @@
 .container-products-in-shop {
     width: 100%;
     height: max-content;
-    margin-top: 130px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 0.1px 0.1px 10px 3px inset white;
     border-radius: 10px;

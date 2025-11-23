@@ -16,7 +16,7 @@ import ProductsCard from '@/components/modules/ProductsCard'
 function Admin() {
 
     const [isSideBarOpen, setIsSideBarOpen] = useState(false)
-    const [isSideBarItemActive, setIsSideBarItemActive] = useState(2)
+    const [isSideBarItemActive, setIsSideBarItemActive] = useState(1)
 
     const usersInfo = [
         { id: 1, name: 'Shayan', email: 'shayan@gmail.com', role: 'ADMIN' },
@@ -88,12 +88,12 @@ function Admin() {
                         <input type='number' placeholder='Price' className='inputs-add-product' />
                         <input type='number' placeholder='Count' className='inputs-add-product' />
                         <input type="file" id="fileInput" />
-                        <label htmlFor="fileInput" class="custom-upload-file-btn">Upload 3D Model</label>
+                        <label htmlFor="fileInput" className="custom-upload-file-btn">Upload 3D Model</label>
                         <button className='btn-add-product'>Add</button>
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
     )
