@@ -75,7 +75,7 @@ function Admin() {
                     ))}
                 </div>
 
-                <div className={`container-products-in-shop ${isSideBarItemActive != 2 ? 'onShowForProductsList' : ''}`}>
+                <div className={`container-products-in-shop ${isSideBarItemActive != 2 ? 'onShow' : ''}`}>
                     <h1 className='title-products-in-shop'>Products</h1>
                     <div className='container-products-in-shop-cards'>
                         <ProductsCard />
@@ -92,6 +92,13 @@ function Admin() {
                     </div>
                 </div>
 
+                <div className={`container-user-info-edit ${isSideBarItemActive != 3 ? 'onShow' : ''}`}>
+                    <h2 className='title-profile'>Profile</h2>
+                    <input type='text' placeholder='Username' className='inputs-profile' />
+                    <input type='text' placeholder='Email' className='inputs-profile' />
+                    <input type='password' placeholder='Password' className='inputs-profile' />
+                    <button className='btn-profile'>Edit</button>
+                </div>
 
             </div>
         </div>
