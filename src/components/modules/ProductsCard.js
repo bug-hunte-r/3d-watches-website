@@ -19,7 +19,7 @@ function ProductsCard() {
             <h2 className='title-product-products-in-shop-card'>{product.title}</h2>
             <p className='desc-product-products-in-shop-card'>{product.desc}</p>
             <p className='price-product-products-in-shop-card'>{product.price}$</p>
-            <p className='count-product-products-in-shop-card'>{product.count}</p>
+            <p className='count-product-products-in-shop-card'>{product.count} In Stock</p>
           </div>
           <Image width={500} height={500} alt='watch-img' className='img-products-in-shop-card' src={product.img} />
         </div>
