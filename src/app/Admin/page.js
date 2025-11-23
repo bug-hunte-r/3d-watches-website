@@ -76,7 +76,7 @@ function Admin() {
                     ))}
                 </div>
 
-                <div className='container-products-in-shop'>
+                <div className={`container-products-in-shop ${isSideBarItemActive != 2 ? 'onShowForProductsList' : ''}`}>
                     <h1 className='title-products-in-shop'>Products</h1>
                     <div className='container-products-in-shop-cards'>
                         <ProductsCard />

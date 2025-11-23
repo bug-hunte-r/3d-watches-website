@@ -137,6 +137,10 @@
 
 /* start products list */
 
+.onShowForProductsList{
+    display: none;
+}
+
 .container-products-in-shop {
     width: 100%;
     height: max-content;
