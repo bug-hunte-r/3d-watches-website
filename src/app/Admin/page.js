@@ -99,6 +99,10 @@ function Admin() {
                     <h2 className='title-tickets'>Coming Soon!</h2>
                 </div>
 
+                <div className={`container-comments ${isSideBarItemActive != 4 ? 'onShow' : ''}`}>
+                    <h2 className='title-comments'>Coming Soon!</h2>
+                </div>
+
             </div>
         </div>
     )
