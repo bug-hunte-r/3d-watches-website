@@ -319,3 +319,18 @@
     font-size: 70px;
     font-family: neo;
 }
+
+.container-comments{
+    width: 100%;
+    height: 80dvh;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-comments{
+    color: white;
+    font-size: 70px;
+    font-family: neo;
+}
