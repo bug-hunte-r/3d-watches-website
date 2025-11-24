@@ -34,7 +34,6 @@ function Admin() {
     const sideBarItems = [
         { id: 1, text: 'Users', icon: FiUsers },
         { id: 2, text: 'Products', icon: IoWatchOutline },
-        { id: 3, text: 'Profile', icon: LiaUserEditSolid },
         { id: 4, text: 'Tickets', icon: LiaTicketAltSolid },
         { id: 5, text: 'Comments', icon: BiCommentDetail },
         { id: 6, text: 'Sign out', icon: GoSignOut }
@@ -86,18 +85,14 @@ function Admin() {
                         <input type='text' placeholder='Description' className='inputs-add-product' />
                         <input type='number' placeholder='Price' className='inputs-add-product' />
                         <input type='number' placeholder='Count' className='inputs-add-product' />
-                        <input type="file" id="fileInput" />
-                        <label htmlFor="fileInput" className="custom-upload-file-btn">Upload 3D Model</label>
+                        <div className='container-upload-section'>
+                            <input type="file" id="fileInput" />
+                            <label htmlFor="fileInput" className="custom-upload-file-btn">Upload 3D Model</label>
+                            <input type="file" id="fileInputImg" />
+                            <label htmlFor="fileInputImg" className="custom-upload-file-btn">Upload Image</label>
+                        </div>
                         <button className='btn-add-product'>Add</button>
                     </div>
-                </div>
-
-                <div className={`container-user-info-edit ${isSideBarItemActive != 3 ? 'onShow' : ''}`}>
-                    <h2 className='title-profile'>Profile</h2>
-                    <input type='text' placeholder='Username' className='inputs-profile' />
-                    <input type='text' placeholder='Email' className='inputs-profile' />
-                    <input type='password' placeholder='Password' className='inputs-profile' />
-                    <button className='btn-profile'>Edit</button>
                 </div>
 
             </div>
