@@ -34,9 +34,9 @@ function Admin() {
     const sideBarItems = [
         { id: 1, text: 'Users', icon: FiUsers },
         { id: 2, text: 'Products', icon: IoWatchOutline },
-        { id: 4, text: 'Tickets', icon: LiaTicketAltSolid },
-        { id: 5, text: 'Comments', icon: BiCommentDetail },
-        { id: 6, text: 'Sign out', icon: GoSignOut }
+        { id: 3, text: 'Tickets', icon: LiaTicketAltSolid },
+        { id: 4, text: 'Comments', icon: BiCommentDetail },
+        { id: 5, text: 'Sign out', icon: GoSignOut }
     ]
 
     return (
@@ -93,6 +93,10 @@ function Admin() {
                         </div>
                         <button className='btn-add-product'>Add</button>
                     </div>
+                </div>
+
+                <div className={`container-tickets ${isSideBarItemActive != 3 ? 'onShow' : ''}`}>
+                    <h2 className='title-tickets'>Coming Soon</h2>
                 </div>
 
             </div>
