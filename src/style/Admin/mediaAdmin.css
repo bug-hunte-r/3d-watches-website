@@ -38,6 +38,13 @@
     .custom-upload-file-btn{
         height: 250px;
     }
+
+    .title-tickets{
+        font-size: calc(5vw + 15px);
+    }
+    .title-comments{
+        font-size: calc(5vw + 15px);
+    }
 }
 
 @media only screen and (min-width: 1500px){
@@ -137,10 +144,16 @@
     .title-tickets{
         font-size: 60px;
     }
+    .title-comments{
+        font-size: 60px;
+    }
 }
 
 @media only screen and (max-width: 455px){
     .title-tickets{
+        font-size: 50px;
+    }
+    .title-comments{
         font-size: 50px;
     }
 }
@@ -149,10 +162,16 @@
     .title-tickets{
         font-size: 40px;
     }
+    .title-comments{
+        font-size: 40px;
+    }
 }
 
 @media only screen and (max-width: 302px){
     .title-tickets{
+        font-size: 30px;
+    }
+    .title-comments{
         font-size: 30px;
     }
 }
