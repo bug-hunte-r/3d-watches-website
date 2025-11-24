@@ -96,7 +96,7 @@ function Admin() {
                 </div>
 
                 <div className={`container-tickets ${isSideBarItemActive != 3 ? 'onShow' : ''}`}>
-                    <h2 className='title-tickets'>Coming Soon</h2>
+                    <h2 className='title-tickets'>Coming Soon!</h2>
                 </div>
 
             </div>
