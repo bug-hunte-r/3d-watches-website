@@ -71,7 +71,7 @@
     .products-in-shop-card {
         width: 44vw;
     }
-    
+
     .custom-upload-file-btn{
         height: 150px;
     }
@@ -130,5 +130,29 @@
 
     .custom-upload-file-btn{
         width: 48%;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .title-tickets{
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 455px){
+    .title-tickets{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .title-tickets{
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 302px){
+    .title-tickets{
+        font-size: 30px;
     }
 }
