@@ -4,6 +4,7 @@ import style from '../../style/AuthForms/AuthForms.css'
 import media from '../../style/AuthForms/mediaAuthForms.css'
 import { IoIosArrowBack } from "react-icons/io";
 import Link from 'next/link';
+import { toast, ToastContainer } from 'react-toastify';
 
 function Signup() {
 
@@ -28,7 +29,23 @@ function Signup() {
         })
         const data = await res.json()
 
-        alert(data)
+        if (data.statusCode === 201) {
+            const successSignup = () => toast.success(data.message);
+            successSignup()
+            setUsername('')
+            setEmail('')
+            setPassword('')
+        }
+
+        if (data.statusCode === 409) {
+            const conflictSignup = () => toast.error(data.message);
+            conflictSignup()
+        }
+
+        if (data.statusCode === 400) {
+            const invalidSignup = () => toast.error(data.message);
+            invalidSignup()
+        }
     }
 
     return (
@@ -44,6 +61,17 @@ function Signup() {
                 <button className='btn-form' onClick={SignUpHandler}>Sign up</button>
                 <p className='text-under-form'>Do you have an account? <Link className='link-under-form' href={'/Login'}>Login</Link></p>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </div>
     )
 }
