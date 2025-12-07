@@ -29,8 +29,8 @@ function Signup() {
         })
         const data = await res.json()
 
-        if (data.statusCode === 201) {
-            const successSignup = () => toast.success(data.message);
+        if (data?.newUser?.message === "User Signuped successfully") {
+            const successSignup = () => toast.success('You are signuped successfully');
             successSignup()
             setUsername('')
             setEmail('')
