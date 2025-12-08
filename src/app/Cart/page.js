@@ -6,6 +6,7 @@ import Nav from '@/components/templates/Nav'
 import CartCards from '@/components/modules/CartCards'
 import { ToastContainer, toast } from 'react-toastify';
 import { redirect } from 'next/navigation'
+import DarkVeil from '@/anim/DarkVeil'
 
 function Cart() {
 
@@ -17,27 +18,32 @@ function Cart() {
     }
 
     return (
-        <div className='container'>
-            <Nav />
-            <div className='container-cart'>
-                <h1 className='title-cart'>Cart</h1>
-                <div className='container-cart-cards'>
-                    <CartCards />
-                </div>
-                <button className='btn-cart' onClick={buyHandler}>Submit</button>
+        <>
+            <div className="container-background">
+                <DarkVeil />
             </div>
-            <ToastContainer
-                position="top-center"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-            />
-        </div>
+            <div className='container'>
+                <Nav />
+                <div className='container-cart'>
+                    <h1 className='title-cart'>Cart</h1>
+                    <div className='container-cart-cards'>
+                        <CartCards />
+                    </div>
+                    <button className='btn-cart' onClick={buyHandler}>Submit</button>
+                </div>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark"
+                />
+            </div>
+        </>
     )
 }
 

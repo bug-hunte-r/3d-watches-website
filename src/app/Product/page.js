@@ -8,6 +8,7 @@ import * as THREE from 'three'
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import gsap from 'gsap'
+import DarkVeil from '@/anim/DarkVeil'
 
 function Product() {
 
@@ -77,17 +78,22 @@ function Product() {
   }, [])
 
   return (
-    <div className='container'>
-      <Nav />
-      <div className='container-product-detail' ref={mountRef}>
-        <div className='container-product-details-texts'>
-          <h1 className='title-product-detail'>Apple Watch</h1>
-          <p className='desc-product-detail'>The strongest and biggest watch</p>
-          <Link href={'/Cart'} className='btn-product-detail'>Add to cart</Link>
-        </div>
-        <div className='container-model-product-detail' ref={watchDiv}></div>
+    <>
+      <div className="container-background">
+        <DarkVeil />
       </div>
-    </div>
+      <div className='container'>
+        <Nav />
+        <div className='container-product-detail' ref={mountRef}>
+          <div className='container-product-details-texts'>
+            <h1 className='title-product-detail'>Apple Watch</h1>
+            <p className='desc-product-detail'>The strongest and biggest watch</p>
+            <Link href={'/Cart'} className='btn-product-detail'>Add to cart</Link>
+          </div>
+          <div className='container-model-product-detail' ref={watchDiv}></div>
+        </div>
+      </div>
+    </>
   )
 }
 

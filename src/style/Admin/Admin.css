@@ -2,7 +2,6 @@
 
 .container-admin{
     width: 100%;
-    /* z-index: 20; */
     display: flex;
 }
 
@@ -15,7 +14,7 @@
     font-family: neo;
     color: white;
     border-right: 1px white solid;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(6px);
     position: fixed;
     top: 0;
     left: 0;
@@ -61,7 +60,7 @@
 
 .items-left-bar-admin-active{
     background-color: white;
-    color: skyblue;
+    color: rgb(182, 104, 255);
 }
 
 .bottom-item{
@@ -93,10 +92,9 @@
     color: white;
     display: flex;
     flex-direction: column;
-    /* padding-left: 30px; */
-    box-shadow: 0.1px 0.1px 10px 3px inset white;
     border-radius: 10px;
     margin: 40px auto;
+    border: 1px solid white;
 }
 
 .container-titles-user-info{
@@ -144,8 +142,8 @@
     margin-top: 40px;
     margin-bottom: 20px;
     backdrop-filter: blur(20px);
-    box-shadow: 0.1px 0.1px 10px 3px inset white;
-    border-radius: 10px;
+    box-shadow: 0.1px 0.1px 8px 1px inset white;
+    border-radius: 15px;
     padding: 20px;
     text-align: center;
 }
@@ -171,7 +169,7 @@
     justify-content: center;
     width: 45vw;
     backdrop-filter: blur(20px);
-    box-shadow: 0.1px 0.1px 10px 1px inset white;
+    box-shadow: 0.1px 0.1px 8px 1px inset white;
     border-radius: 10px;
     padding: 20px;
 }
@@ -238,7 +236,7 @@
     border-radius: 10px;
     outline: none;
     padding: 20px;
-    box-shadow: 0.1px 0.1px 10px 1px inset white;
+    box-shadow: 0.1px 0.1px 5px 1px inset white;
     border: none;
     font-size: 23px;
     color: white;
@@ -269,7 +267,7 @@
     font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0.1px 0.1px 5px 2px inset white;
+    box-shadow: 0.1px 0.1px 5px 1px inset white;
     font-weight: 300;
 }
 

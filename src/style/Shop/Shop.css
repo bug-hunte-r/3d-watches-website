@@ -41,7 +41,8 @@
     transform: translateY(50px);
     transition: 0.4s;
     cursor: pointer;
-    box-shadow: 0.1px 0.1px 10px 2px white inset;
+    backdrop-filter: blur(50px);
+    box-shadow: 0.1px 0.1px 8px 1px white inset;
 }
 
 .img-shop-card {
@@ -105,7 +106,8 @@
     align-items: center;
     justify-content: space-evenly;
     border-radius: 20px;
-    box-shadow: 0.1px 0.1px 10px 3px inset white;
+    box-shadow: 0.1px 0.1px 10px 1px inset white;
+    backdrop-filter: blur(50px);
     cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;

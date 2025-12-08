@@ -2,9 +2,9 @@
     width: 100%;
     height: max-content;
     margin-top: 130px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0.1px 0.1px 10px 1px inset white;
-    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0.1px 0.1px 8px 1px inset white;
+    border-radius: 15px;
     padding: 20px;
     text-align: center;
 }
@@ -29,8 +29,7 @@
     text-align: center;
     justify-content: center;
     width: 45vw;
-    backdrop-filter: blur(20px);
-    box-shadow: 0.1px 0.1px 10px 1px inset white;
+    box-shadow: 0.1px 0.1px 8px 1px inset white;
     border-radius: 10px;
     padding: 20px;
 }
@@ -94,7 +93,7 @@
 .btn-cart{
     background-color: transparent;
     border: none;
-    box-shadow: 0.1px 0.1px 10px 1px inset white;
+    box-shadow: 0.1px 0.1px 5px 1px inset white;
     border-radius: 10px;
     color: white;
     padding: 10px 20px 10px 20px;

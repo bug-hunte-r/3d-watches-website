@@ -1,11 +1,17 @@
+"use client"
 import React from 'react'
 import style from '../../style/AuthForms/AuthForms.css'
 import media from '../../style/AuthForms/mediaAuthForms.css'
 import { IoIosArrowBack } from "react-icons/io";
 import Link from 'next/link';
+import DarkVeil from '@/anim/DarkVeil';
 
 function Login() {
     return (
+        <>
+            <div className="container-background">
+                <DarkVeil />
+            </div>
             <div className='container'>
                 <div className='container-form login-from'>
                     <div className='container-title-and-back-icon-form'>
@@ -18,6 +24,8 @@ function Login() {
                     <p className='text-under-form'>Dont have an account? <Link className='link-under-form' href={'/Signup'}>Signup</Link></p>
                 </div>
             </div>
+        </>
+
     )
 }
 
