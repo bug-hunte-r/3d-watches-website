@@ -17,10 +17,10 @@
 }
 
 body{
-  background-color: skyblue;
+  background-color: black;
 }
 
-.background {
+.container-background {
   position: fixed;
   top: 0;
   left: 0;

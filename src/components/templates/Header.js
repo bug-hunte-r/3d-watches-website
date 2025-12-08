@@ -156,16 +156,18 @@ function Header({ targetRef }) {
   }, [])
 
   return (
-    <div className='container'>
-      <Nav />
-      <header className='header' ref={mountRef}>
-        <div className='container-texts-header'>
-          <h1 className='title-header'>The Perfect Moment Between Past And Future</h1>
-          <button className='btn-header'>Buy Now</button>
-        </div>
-        <div className='container-model' ref={watchDiv} id="scroll-section"></div>
-      </header>
-    </div>
+    <>
+      <div className='container'>
+        <Nav />
+        <header className='header' ref={mountRef}>
+          <div className='container-texts-header'>
+            <h1 className='title-header'>The Perfect Moment Between Past And Future</h1>
+            <button className='btn-header'>Buy Now</button>
+          </div>
+          <div className='container-model' ref={watchDiv} id="scroll-section"></div>
+        </header>
+      </div>
+    </>
   )
 }
 
