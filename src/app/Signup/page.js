@@ -6,8 +6,11 @@ import { IoIosArrowBack } from "react-icons/io";
 import Link from 'next/link';
 import { toast, ToastContainer } from 'react-toastify';
 import DarkVeil from '@/anim/DarkVeil';
+import { useRouter } from 'next/navigation';
 
 function Signup() {
+
+    const router = useRouter()
 
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
@@ -36,6 +39,7 @@ function Signup() {
             setUsername('')
             setEmail('')
             setPassword('')
+            router.push('/')
         }
 
         if (data.statusCode === 409) {
