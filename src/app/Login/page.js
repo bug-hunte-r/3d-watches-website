@@ -24,6 +24,7 @@ function Login() {
 
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}/auth/login`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-type': 'application/json',
             },

@@ -26,6 +26,7 @@ function Signup() {
 
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}/auth/signup`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-type': 'application/json'
             },
