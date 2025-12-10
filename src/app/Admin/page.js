@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from '../../style/Admin/Admin.css'
 import media from '../../style/Admin/mediaAdmin.css'
 import Nav from '@/components/templates/Nav'
@@ -13,8 +13,12 @@ import { GoSignOut } from "react-icons/go";
 import { CgMenuGridO } from "react-icons/cg";
 import ProductsCard from '@/components/modules/ProductsCard'
 import DarkVeil from '@/anim/DarkVeil'
+import { useRouter } from 'next/navigation'
+import { toast, ToastContainer } from 'react-toastify'
 
 function Admin() {
+
+    const router = useRouter()
 
     const [isSideBarOpen, setIsSideBarOpen] = useState(false)
     const [isSideBarItemActive, setIsSideBarItemActive] = useState(1)
@@ -39,6 +43,19 @@ function Admin() {
         { id: 4, text: 'Comments', icon: BiCommentDetail },
         { id: 5, text: 'Sign out', icon: GoSignOut }
     ]
+
+    useEffect(() => {
+
+        const getAllUsers = async () => {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API}/auth/users`)
+            const data = await res.json()
+
+            console.log(data);
+            
+        }
+
+        getAllUsers()
+    }, [])
 
     return (
         <>
@@ -109,6 +126,17 @@ function Admin() {
                     </div>
 
                 </div>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark"
+                />
             </div>
         </>
 
