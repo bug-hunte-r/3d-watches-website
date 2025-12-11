@@ -26,7 +26,8 @@ function Login() {
             method: 'POST',
             credentials: 'include',
             headers: {
-                'Content-type': 'Authorization',
+                'Content-type': 'application/json',
+                'Authorization': 'Bearer ' + token,
             },
             body: JSON.stringify(userLoginMap)
         })
