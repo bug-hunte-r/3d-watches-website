@@ -24,6 +24,11 @@ function Signup() {
             password
         }
 
+        if (!username || !username.trim() || !email || !email.trim() || !password || !password.trim()) {
+            const notValidSignup = () => toast.error('Datas are not valid');
+            notValidSignup()
+        }
+
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}/auth/signup`, {
             method: 'POST',
             credentials: 'include',

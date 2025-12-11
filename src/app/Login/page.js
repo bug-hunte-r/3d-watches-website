@@ -22,6 +22,11 @@ function Login() {
             password
         }
 
+        if (!identifire || !identifire.trim() || !password || !password.trim()) {
+            const notValidLogin = () => toast.error('Datas are not valid');
+            notValidLogin()  
+        }
+
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}/auth/login`, {
             method: 'POST',
             credentials: 'include',
@@ -39,11 +44,6 @@ function Login() {
             setIdentifire('')
             setPassword('')
             // router.push('/')
-        }
-
-        if (!identifire || !identifire.trim() || !password || !password.trim()) {
-            const notValidLogin = () => toast.error('Datas are not valid');
-            notValidLogin()  
         }
 
         if (data.message === 'The username or emial is invalid') {
