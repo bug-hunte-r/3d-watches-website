@@ -38,7 +38,7 @@ function Login() {
             successLogin()
             setIdentifire('')
             setPassword('')
-            router.push('/')
+            // router.push('/')
         }
 
         if (!identifire || !identifire.trim() || !password || !password.trim()) {

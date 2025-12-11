@@ -40,7 +40,7 @@ function Signup() {
             setUsername('')
             setEmail('')
             setPassword('')
-            router.push('/')
+            // router.push('/')
         }
 
         if (data.statusCode === 409) {
