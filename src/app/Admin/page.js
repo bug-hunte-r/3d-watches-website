@@ -23,17 +23,15 @@ function Admin() {
     const [isSideBarOpen, setIsSideBarOpen] = useState(false)
     const [isSideBarItemActive, setIsSideBarItemActive] = useState(1)
 
+    const [title, setTitle] = useState('')
+    const [desc, setDesc] = useState('')
+    const [price, setPrice] = useState('')
+    const [count, setCount] = useState('')
+
     const usersInfo = [
         { id: 1, name: 'Shayan', email: 'shayan@gmail.com', role: 'ADMIN' },
         { id: 2, name: 'Kian', email: 'Kian@gmail.com', role: 'USER' },
         { id: 3, name: 'MMd', email: 'MMd@gmail.com', role: 'USER' },
-        { id: 4, name: 'Ahmad', email: 'ahmad@gmail.com', role: 'USER' },
-        { id: 5, name: 'babak', email: 'babak@gmail.com', role: 'USER' },
-        { id: 6, name: 'sara', email: 'sara@gmail.com', role: 'USER' },
-        { id: 7, name: 'Mostafa', email: 'Mostafa@gmail.com', role: 'USER' },
-        { id: 8, name: 'parham', email: 'parham@gmail.com', role: 'USER' },
-        { id: 9, name: 'Arina', email: 'Arina@gmail.com', role: 'USER' },
-        { id: 10, name: 'Mahmod', email: 'Mahmod@gmail.com', role: 'USER' },
     ]
 
     const sideBarItems = [
@@ -44,15 +42,30 @@ function Admin() {
         { id: 5, text: 'Sign out', icon: GoSignOut }
     ]
 
-    useEffect(() => {
+    // const productMap = {
+    //     title,
+    //     desc,
+    //     price,
+    //     count,
+    // }
 
-        const getAllUsers = async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API}/auth/users`)
-            const data = await res.json()            
-        }
+    // useEffect(() => {
+    //     const addNewProduct = async () => {
 
-        getAllUsers()
-    }, [])
+    //         const res = await fetch(`${process.env.NEXT_PUBLIC_API}/product/add`, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-type': 'application/json'
+    //             },
+    //             body: JSON.stringify(productMap)
+    //         })
+    //         const data = await res.json()
+
+    //         console.log(data);
+
+    //     }
+    //     addNewProduct()
+    // }, [])
 
     return (
         <>

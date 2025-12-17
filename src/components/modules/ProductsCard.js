@@ -1,21 +1,35 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from '../../style/Admin/Admin.css'
 import media from '../../style/Admin/mediaAdmin.css'
 import { CiTrash } from "react-icons/ci";
 
 function ProductsCard() {
 
-  const products = [
-    { id: 1, img: '/imgs/img.avif', title: 'Casio Watch', desc: 'The best and strongest watch', price: 100, count: 30 },
-    { id: 2, img: '/imgs/watch2.png', title: 'Huawei Watch', desc: 'The smartest and cleaner watch', price: 136, count: 17 },
-    { id: 3, img: '/imgs/watch3.webp', title: 'Apple Watch', desc: 'The strongest and biggest watch', price: 198, count: 45 }
+  const productsImg = [
+    { img: '/imgs/img.avif' },
+    { img: '/imgs/watch2.png' },
+    { img: '/imgs/watch3.webp' }
   ]
+
+  const [allProducts, setAllProducts] = useState([])
+
+  useEffect(() => {
+
+    const getAllProducts = async () => {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API}/product/all`)
+      const data = await res.json()
+      setAllProducts(data)
+    }
+
+    getAllProducts()
+  }, [])
 
   return (
     <>
-      {products.map((product) => (
-        <div className='products-in-shop-card' key={product.id}>
+      {allProducts.map((product) => (
+        <div className='products-in-shop-card' key={product._id}>
           <div className='container-products-in-shop-cards-texts'>
             <h2 className='title-product-products-in-shop-card'>{product.title}</h2>
             <p className='desc-product-products-in-shop-card'>{product.desc}</p>
@@ -23,7 +37,7 @@ function ProductsCard() {
             <p className='count-product-products-in-shop-card'>{product.count} In Stock</p>
             <CiTrash className='icon-delete-product-from-store' />
           </div>
-          <Image width={500} height={500} alt='watch-img' className='img-products-in-shop-card' src={product.img} />
+            <Image width={500} height={500} alt='watch-img' className='img-products-in-shop-card' src={'/imgs/watch3.webp'} />
         </div>
       ))}
     </>
