@@ -26,6 +26,17 @@ function ProductsCard() {
     getAllProducts()
   }, [])
 
+  const deleteProductHandler = async (id) => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API}/product/delete/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-type': 'application/json'
+      },
+    })
+    const data = await res.json()
+    console.log(data);
+  }
+
   return (
     <>
       {allProducts.map((product) => (
@@ -35,9 +46,9 @@ function ProductsCard() {
             <p className='desc-product-products-in-shop-card'>{product.desc}</p>
             <p className='price-product-products-in-shop-card'>{product.price}$</p>
             <p className='count-product-products-in-shop-card'>{product.count} In Stock</p>
-            <CiTrash className='icon-delete-product-from-store' />
+            <CiTrash className='icon-delete-product-from-store' onClick={() => deleteProductHandler(product._id)} />
           </div>
-            <Image width={500} height={500} alt='watch-img' className='img-products-in-shop-card' src={'/imgs/watch3.webp'} />
+          <Image width={500} height={500} alt='watch-img' className='img-products-in-shop-card' src={'/imgs/watch3.webp'} />
         </div>
       ))}
     </>
