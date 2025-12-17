@@ -48,10 +48,7 @@ function Admin() {
 
         const getAllUsers = async () => {
             const res = await fetch(`${process.env.NEXT_PUBLIC_API}/auth/users`)
-            const data = await res.json()
-
-            console.log(data);
-            
+            const data = await res.json()            
         }
 
         getAllUsers()

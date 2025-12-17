@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import style from '../../style/Admin/Admin.css'
 import media from '../../style/Admin/mediaAdmin.css'
+import { CiTrash } from "react-icons/ci";
 
 function ProductsCard() {
 
@@ -20,6 +21,7 @@ function ProductsCard() {
             <p className='desc-product-products-in-shop-card'>{product.desc}</p>
             <p className='price-product-products-in-shop-card'>{product.price}$</p>
             <p className='count-product-products-in-shop-card'>{product.count} In Stock</p>
+            <CiTrash className='icon-delete-product-from-store' />
           </div>
           <Image width={500} height={500} alt='watch-img' className='img-products-in-shop-card' src={product.img} />
         </div>

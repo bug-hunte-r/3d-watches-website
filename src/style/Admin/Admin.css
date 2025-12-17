@@ -60,7 +60,7 @@
 
 .items-left-bar-admin-active{
     background-color: white;
-    color: rgb(182, 104, 255);
+    color: #b668ff;
 }
 
 .bottom-item{
@@ -212,6 +212,12 @@
     font-size: calc(1vw + 5px);
     font-family: neo;
     color: white;
+}
+
+.icon-delete-product-from-store{
+    color: #9627ff;
+    font-size: calc(1vw + 15px);
+    cursor: pointer;
 }
 
 .title-add-product{
