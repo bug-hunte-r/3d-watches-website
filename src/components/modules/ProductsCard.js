@@ -7,12 +7,6 @@ import { CiTrash } from "react-icons/ci";
 
 function ProductsCard() {
 
-  const productsImg = [
-    { img: '/imgs/img.avif' },
-    { img: '/imgs/watch2.png' },
-    { img: '/imgs/watch3.webp' }
-  ]
-
   const [allProducts, setAllProducts] = useState([])
 
   useEffect(() => {

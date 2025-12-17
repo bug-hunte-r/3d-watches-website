@@ -16,16 +16,14 @@
 
 .container-shop-cards {
     width: 100%;
-    height: max-content;
+    height: auto;
     display: grid;
     justify-content: space-around;
     align-items: center;
     grid-template-columns: repeat(3, calc(21vw + 20px));
     overflow-y: hidden;
-    margin-top: -50px;
-    padding-top: 150px;
-    padding-bottom: 20px;
-    row-gap: 100px;
+    margin-top: 20px;
+    row-gap: 50px;
 }
 
 .shop-cards {
@@ -38,11 +36,12 @@
     justify-content: space-evenly;
     border-radius: 20px;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(80px);
     transition: 0.4s;
     cursor: pointer;
     backdrop-filter: blur(50px);
     box-shadow: 0.1px 0.1px 8px 1px white inset;
+    margin-top: 60px;
 }
 
 .img-shop-card {
@@ -127,4 +126,11 @@
     width: calc(20vw + 10px);
     height: calc(20vw + 10px);
     object-fit: cover;
+}
+
+.title-loading{
+    color: white;
+    font-family: neo;
+    font-weight: 500;
+    margin: 0 auto;
 }
